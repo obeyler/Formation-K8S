@@ -1,2 +1,45 @@
-# formation
-Formation K8S
+# Programme de la formation
+## Docker
+- [Docker file](Chapitres/DockerFile.md)
+- [Principales commandes](Chapitres/DockerCommand.md)
+- [Docker registry](Chapitres/DockerRegistry.md) 
+- [Docker forces et faiblesses](Chapitres/DockerForceFaiblesse.md)
+## Kubernetes
+- [Principaux composants K8S](Chapitres/PrincipauxComposants.md)
+- [Différentes Topologies de serveur K8S](Chapitres/TopologieK8S.md)
+- [KubeConfig](Chapitres/KubeConfig.md)
+## Principaux objects / concepts K8S
+- [Pod](Chapitres/Pod.md)
+- [Label Annotation](Chapitres/LabelAnnotation.md) 
+- [ConfigMap](Chapitres/ConfigMap.md) 
+- [Secret](Chapitres/Secret.md) 
+- [Deployment](Chapitres/Deployment.md) 
+- [Service](Chapitres/Service.md) 
+- [Ingress / ingress Controller](Chapitres/Ingress.md)
+- [PersistentVolume](Chapitres/PersistentVolume.md)
+- [StorageClass](Chapitres/StorageClass.md)
+- [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
+- [RBAC](Chapitres/Rbac.md)
+- [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
+- [Taint](Chapitres/Taint.md)
+## Mise en pratique
+- [Lab 1](Exercices/Lab1.md) (deploiement pod configmap service secret ingress)  
+- [Lab 2](Exercices/Lab2.md) (resource probe)
+- [Lab 3](Exercices/Lab3.md) ()
+- [Lab 3](Execices.Lab4.md) (RBAC)
+## Ecosysteme & outils
+- [Helm](Tools/Helm)
+- [Kustomize](Tools/Kustomize.md)
+- [Metric-server](Tools/MetricServer)
+- [Cert-manager](Tools/CertManager.md)
+- [Prometheus](Tools/Prometheus.md)
+- [Grafana](Tools/Grafana.md)
+- [Loki](Tools/Loki.md)
+- [Harbor](Tools/Harbor.md)
+- [Falco](Tools/Falco.md)
+- [Artifactory/Jcr](Tools/Artifactory.md)
+- [Rancher](Tools/Rancher.md)
+- [Artifact.io](Tools/ArtifactIo.md)
+- [Trivy](Tools/Trivy.md)
+### Force / Faiblesse
+
