@@ -4,10 +4,12 @@
 - [Principales commandes](Chapitres/DockerCommand.md)
 - [Docker registry](Chapitres/DockerRegistry.md) 
 - [Docker forces et faiblesses](Chapitres/DockerForceFaiblesse.md)
+
 ## Kubernetes
 - [Principaux composants K8S](Chapitres/PrincipauxComposants.md)
 - [Différentes Topologies de serveur K8S](Chapitres/TopologieK8S.md)
 - [KubeConfig](Chapitres/KubeConfig.md)
+
 ## Principaux objects / concepts K8S
 - [Pod](Chapitres/Pod.md)
 - [Label Annotation](Chapitres/LabelAnnotation.md) 
@@ -22,11 +24,13 @@
 - [RBAC](Chapitres/Rbac.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [Taint et Tolération](Chapitres/Taint.md)
+
 ## Mise en pratique
-- [Lab 1](Exercices/Lab1.md) (deploiement pod configmap service secret ingress)  
+- [Lab 1](Exercices/Lab1.md) (deploiement pod configmap service secret )  
 - [Lab 2](Exercices/Lab2.md) (resource probe)
 - [Lab 3](Exercices/Lab3.md) ()
 - [Lab 3](Execices.Lab4.md) (RBAC)
+
 ## Ecosysteme & outils
 - [Helm](Tools/Helm)
 - [Kustomize](Tools/Kustomize.md)
