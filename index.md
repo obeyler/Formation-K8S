@@ -26,10 +26,10 @@
 - [Taint et Tolération](Chapitres/Taint.md)
 
 ## Mise en pratique
-- [Lab 1](Exercices/Lab1.md) (deploiement pod configmap service secret )  
-- [Lab 2](Exercices/Lab2.md) (resource probe)
-- [Lab 3](Exercices/Lab3.md) ()
-- [Lab 3](Execices.Lab4.md) (RBAC)
+- [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
+- [Lab 2](Exercices/Lab-002.md) (resource probe)
+- [Lab 3](Exercices/Lab-003.md) ()
+- [Lab 3](Execices/Lab-004.md) (RBAC)
 
 ## Ecosysteme & outils
 - [Helm](Tools/Helm)
@@ -39,6 +39,7 @@
 - [Prometheus](Tools/Prometheus.md)
 - [Grafana](Tools/Grafana.md)
 - [Loki](Tools/Loki.md)
+- [Longhorn](Tools/Longhorn.md)
 - [Harbor](Tools/Harbor.md)
 - [Falco](Tools/Falco.md)
 - [Artifactory/Jcr](Tools/Artifactory.md)

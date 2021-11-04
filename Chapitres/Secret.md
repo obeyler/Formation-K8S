@@ -19,11 +19,11 @@ data:
 ```
 ## Les différents types possibles
 - Opaque (on y mettra ce qu'on veut) 
-- kubernetes.io/tls(fournit des fichiers type tls.cert, tls.key, ca.cert)
+- kubernetes.io/tls (fournit des fichiers type `tls.cert`, `tls.key`, `ca.cert`)
 - kubernetes.io/service-account-token (un jeton de service Kubernetes)
 - kubernetes.io/dockerconfigjson (un Docker sérialisé config. json fichier, pour fournir les informations d'identification Docker) 
 - kubernetes.io/ssh-auth (fournir les informations d'identification SSH).
 - kubernetes.io/basic-auth (fournit des crédentials type basic auth)
 ## Commandes utiles
-decoder un secret
+décoder un secret
 `kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode`
