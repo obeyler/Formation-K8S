@@ -1,0 +1,7 @@
+# StorageClass
+## Role
+
+## Structure
+```yaml
+
+```
