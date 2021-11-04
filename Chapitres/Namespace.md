@@ -5,6 +5,7 @@ Il existe des namespaces spécifiques :
 - default (celui où vous vos objects kubernetes iront si vous ne spécifiez pas de namespace)
 - kube-system (celui utilisé pour les composants system)
 - kube-public (ns visible par tous)
+
 ## Structure
 ```yaml
  apiVersion: v1
@@ -18,6 +19,11 @@ Création d'un namespace
 ```
 kubectl create ns monnamespace
 ```
+Voir le yaml décrivant votre namespace
+```
+kubectl get ns monnamespace -o yaml
+```
+
 Lister les namespaces
 ```
 kubectl get ns
@@ -36,3 +42,8 @@ Il arrive que lors d'une suppression de namespace celui-ci reste bloqué en mode
 - une resource custom est présente et n'est pas détruite 
 => trouver la CR et la supprimer
 Seulement en dernier recours supprimer le finalizer du namespace
+
+## Exercice:
+- Création de votre namespace 
+- affichage du yaml de votre namespace
+- suppression de votre namespace
