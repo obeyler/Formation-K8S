@@ -21,7 +21,7 @@
 - [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
 - [RBAC](Chapitres/Rbac.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
-- [Taint](Chapitres/Taint.md)
+- [Taint et Tolération](Chapitres/Taint.md)
 ## Mise en pratique
 - [Lab 1](Exercices/Lab1.md) (deploiement pod configmap service secret ingress)  
 - [Lab 2](Exercices/Lab2.md) (resource probe)
