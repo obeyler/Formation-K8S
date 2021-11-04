@@ -4,6 +4,7 @@
     - Apiserver
     - Kube-controller
     - Etcd
+    - Scheduler
     - Kube-proxy
     - CRI Container Runtime Interface (Docker, ContainerD, CrIo)
     - Kubelet

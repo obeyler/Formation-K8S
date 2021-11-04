@@ -4,7 +4,7 @@ Un ConfigMap est une collection de donnée qui pourront être utilisé soit comm
 Il faut garder comme principe en tête que l'on ne doit pas mettre de donnée sensible dans une configmap (un secret est plus approprié pour cela).
 Un configmap est lu au démarrage du pod. Une fois celui-ci démarré, un changement dans le configmap ne sera pas forcément répercuté sur le pod : cela dependra de la configuration de kubelet.
 
-Les données dans un configmap sont en clairs (ie non encodées en base64).
+Les données dans un configmap sont en clairs (ie non encodées en base64) contrairement au secret.
 ## Structure
 simple:
 ```yaml
