@@ -1,5 +1,5 @@
 # Topologie
-En fonction de l'usage que l'on va avoir du cluster, une topologie differente sera à choisir
+En fonction de l'usage que l'on va avoir du cluster, une topologie différente sera à choisir
 
 ## Minimaliste
 All in one (Minikub) Data plane et Control plane sont sur une même machine. 
