@@ -1,5 +1,5 @@
 # Principaux composants K8S
-![schema](../images/architecture-K8S.svg)
+![schema](https://obeyler.github.io/formation/images/architecture-K8S.svg)
 - Control plane / Master
     - Apiserver
     - Kube-controller
