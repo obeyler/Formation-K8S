@@ -11,6 +11,7 @@
 - [KubeConfig](Chapitres/KubeConfig.md)
 
 ## Principaux objects / concepts K8S
+- [Namespace](Chapitres/Namespace.md)
 - [Pod](Chapitres/Pod.md)
 - [Label Annotation](Chapitres/LabelAnnotation.md) 
 - [ConfigMap](Chapitres/ConfigMap.md) 
@@ -21,7 +22,7 @@
 - [PersistentVolume](Chapitres/PersistentVolume.md)
 - [StorageClass](Chapitres/StorageClass.md)
 - [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
-- [RBAC](Chapitres/Rbac.md)
+- [RBAC](Chapitres/RBAC.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [Taint et Tolération](Chapitres/Taint.md)
 
@@ -29,7 +30,7 @@
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
 - [Lab 2](Exercices/Lab-002.md) (resource probe)
 - [Lab 3](Exercices/Lab-003.md) ()
-- [Lab 3](Execices/Lab-004.md) (RBAC)
+- [Lab 3](Exercices/Lab-004.md) (RBAC)
 
 ## Ecosysteme & outils
 - [Helm](Tools/Helm)
