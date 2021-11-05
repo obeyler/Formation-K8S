@@ -1,16 +1,19 @@
 # Topologie
-En fonction de l'usage que l'on va avoir du cluster, une topologie différente sera à choisir
+En fonction de l'usage que l'on va avoir du cluster, une topologie différente sera à choisir. Voici les plus standard
 
 ## Minimaliste
 ![schema](https://obeyler.github.io/Formation-K8S/images/topologie-simple-K8S.drawio.svg)
+
 All in one (Minikub) Data plane et Control plane sont sur une même machine. 
 petite information à savoir sur un minikube, le stockage sera fait sur la machine hôte. 
 ## Classique 
 ![schema](https://obeyler.github.io/Formation-K8S/images/topologie-classique-K8S.drawio.svg)
+
 ETCD&Control Plane + n Worker, 
 on trouvera souvent ce type de cluster avec 3 noeuds master qui portent à la fois ETCD et la partie Control plane et des noeuds workers qui portent les pods applicatifs 
 ## Ha/Prod 
 ![schema](https://obeyler.github.io/Formation-K8S/images/topologie-ha-K8S.drawio.svg)
+
 On aura un cluster ETCD de n machines + un Control Plane de 3 machines + n Workers
 Une approche dédiée à la production sera de déporté, hors du control plane, un cluster ETCD composé de 3 nœuds ou plus.
 
