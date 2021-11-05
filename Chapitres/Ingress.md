@@ -1,11 +1,11 @@
 # Ingress 
 ## Role
 Le but d'un Ingress est de fournir des informations nécessaires à un ingress controller.
-l'ingress controller va effectuer un routage vers différents services à l'intérieur du cluster en fonction d'informations présentes dans la requête http/https. 
+L'ingressController va effectuer un routage vers différents services à l'intérieur du cluster en fonction d'informations présentes dans la requête http/https. 
 L'Ingress peut également donner l'indication à l'ingress controller quel certificat il doit presenter.
 
 
-## Structure
+## Structure d'un Ingress
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress

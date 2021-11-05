@@ -12,19 +12,33 @@
 - [Géneralité](Chapitres/Generalite.md)
 
 ## Principaux objects / concepts K8S
+### Etape 1 mon premier pod
 - [Namespace](Chapitres/Namespace.md)
 - [Pod](Chapitres/Pod.md)
 - [Label Annotation](Chapitres/LabelAnnotation.md) 
 - [ConfigMap](Chapitres/ConfigMap.md) 
-- [Secret](Chapitres/Secret.md) 
-- [Deployment](Chapitres/Deployment.md) 
-- [Service](Chapitres/Service.md) 
+- [Secret](Chapitres/Secret.md)
+
+### Etape 2 - les autres moyens d'avoir des pods
+- Tour d'horizon
+- [Deployment](Chapitres/Deployment.md)
+- [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
+- [DaemonSet](Chapitres/Demonset.md)
+- [StatefulSet](Chapitres/Statefulset.md)
+
+### Etape 3 - L'exposition
+- [Service](Chapitres/Service.md)
 - [Ingress / ingress Controller](Chapitres/Ingress.md)
+
+### Etape 3 - la persistence
+- Tour d'horizon de la persistance
 - [PersistentVolume](Chapitres/PersistentVolume.md)
 - [StorageClass](Chapitres/StorageClass.md)
 - [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
+- 
+### Etape 4 - La sécurité
 - [RBAC](Chapitres/RBAC.md)
-- [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
+- SecurityContext
 - [Taint et Tolération](Chapitres/Taint.md)
 
 ## Mise en pratique

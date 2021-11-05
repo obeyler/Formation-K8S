@@ -20,6 +20,9 @@ spec:
  ....
 ```
 
+> Kubernetes offre également l'opportunité d'étendre ses concepts et utiliser sa capacité à faire du CRUD pour de nouveaux objects.
+à partir de CRD (CustomDefinitionResource)
+
 ## Format générique des Commandes 
 
 Voici les commandes de base que l'on peut avoir via `kubectl` (liste non exhaustive) :
