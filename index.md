@@ -9,6 +9,7 @@
 - [Principaux composants K8S](Chapitres/PrincipauxComposants.md)
 - [Différentes Topologies de serveur K8S](Chapitres/TopologieK8S.md)
 - [KubeConfig](Chapitres/KubeConfig.md)
+- [Géneralité](Chapitres/Generalite.md)
 
 ## Principaux objects / concepts K8S
 - [Namespace](Chapitres/Namespace.md)

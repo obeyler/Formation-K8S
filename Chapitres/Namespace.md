@@ -1,6 +1,8 @@
 # Namespace
 ## Role
-On peut voir les namespaces comme un moyen de classer et compartimenter au sein d'un K8S. 
+On peut voir les namespaces comme un moyen de classer et compartimenter au sein d'un K8S.
+On peut également appliquer des règles de sécurités au sein d'un namespace et ainsi permettre une isolation entre plusieurs projets.
+
 Il existe des namespaces spécifiques :
 - default (celui où vous vos objects kubernetes iront si vous ne spécifiez pas de namespace)
 - kube-system (celui utilisé pour les composants system)
