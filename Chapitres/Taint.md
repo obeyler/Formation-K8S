@@ -7,3 +7,4 @@ Les Taints sont posés exclusivement sur les nodes. Elles servent à empêcher u
 
 ```
 
+[Retour](https://obeyler.github.io/Formation-K8S/)

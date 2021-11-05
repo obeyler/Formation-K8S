@@ -65,3 +65,6 @@ Le pod offre la possibilité de détecter s'il est opérationnel ou pas par le b
 ## Les resources
 
 ## Les affinity
+
+
+[Retour](https://obeyler.github.io/Formation-K8S/)

@@ -72,3 +72,5 @@ Tout à fait un même cluster peut héberger plusieurs ingresscontroller,
 - HaProxy (https://github.com/jcmoraisjr/haproxy-ingress)
 - contour (https://github.com/heptio/contour)
 - kong (https://github.com/Kong/kubernetes-ingress-controller)
+
+[Retour](https://obeyler.github.io/Formation-K8S/)

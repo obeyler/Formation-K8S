@@ -47,3 +47,5 @@ Seulement en dernier recours supprimer le finalizer du namespace
 - Création de votre namespace 
 - affichage du yaml de votre namespace
 - suppression de votre namespace
+
+[Retour](https://obeyler.github.io/Formation-K8S/)
