@@ -20,3 +20,6 @@ Note: Un nombre impair de nœud pour le cluster ETCD est toujours nécessaire. P
 - ETCD avec 1 nœud = pas de tolérance au panne (la majorité correspond à 1/1 nœud)
 - ETCD avec 3 nœuds = tolérance d'une panne (la majorité correspond à 2/3 nœuds)
 - ETCD avec 5 nœuds = tolérance de deux pannes (la majorité correspond à 3/5 nœuds)
+
+
+[Retour](https://obeyler.github.io/Formation-K8S/)

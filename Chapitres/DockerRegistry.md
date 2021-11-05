@@ -32,3 +32,5 @@ Pour contrer le rate limiting imposé par dockerhub, on peut utiliser des regist
 "registry-mirrors": ["https://<my-docker-mirror-host>"]
 }
 ```
+
+[Retour](https://obeyler.github.io/Formation-K8S/)

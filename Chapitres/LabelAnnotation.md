@@ -30,3 +30,4 @@ Contrairement à un Label, on ne peut pas faire de recherche selective sur une a
 ```kubectl annotate pods my-pod icon-url=http://goo.gl/XXBTWq```
 
 
+[Retour](https://obeyler.github.io/Formation-K8S/)

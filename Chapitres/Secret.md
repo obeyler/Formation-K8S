@@ -27,3 +27,5 @@ data:
 ## Commandes utiles
 décoder un secret
 `kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode`
+
+[Retour](https://obeyler.github.io/Formation-K8S/)

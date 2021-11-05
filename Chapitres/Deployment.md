@@ -11,3 +11,7 @@ Permettre de mettre à jour les images et la scalabilité du nombre d'instance d
 `kubectl create `
 
 ## FAQ
+
+
+
+[Retour](https://obeyler.github.io/Formation-K8S/)
