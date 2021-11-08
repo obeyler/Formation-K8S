@@ -82,20 +82,52 @@ Si la liveness probe échoue, kubelet tue le Conteneur et le Conteneur est soumi
 Indique si le Conteneur est prêt à servir des requêtes. 
 Si la readiness probe échoue, le contrôleur de points de terminaison (Endpoints) retire l'adresse IP du Pod des points de terminaison de tous les Services correspondant au Pod. 
 L'état par défaut avant le délai initial est Failure.
+Une fois passé en mode not ready, Kubernetes attendra que la sonde retourne N fois en positif avant de réintégrer le pod dans le service.
+N devant être supérieur ou égal à la valeur de `successThreshold` (qui par défaut est égale à 1)
 
-
-
-
-
-
-Plusieurs actions de sonde existent :
+Quelles actions peuvent être faites par une sonde ?
+Plusieurs actions existent :
 - ExecAction: Exécute la commande spécifiée à l'intérieur du Conteneur. Le diagnostic est considéré réussi si la commande se termine avec un code de retour de 0.
+exemple :
+```yaml
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
+```
 
 - TCPSocketAction: Exécute un contrôle TCP sur l'adresse IP du Conteneur et sur un port spécifié. Le diagnostic est considéré réussi si le port est ouvert.
+exemple :
+```yaml
+    readinessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    livenessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 20
+```
 
 - HTTPGetAction: Exécute une requête HTTP Get sur l'adresse IP du Conteneur et sur un port et un chemin spécifiés. Le diagnostic est considéré réussi si la réponse a un code de retour supérieur ou égal à 200 et inférieur à 400.
+exemple :
+```yaml
+    livenessProbe:
+      httpGet:
+        path: /healthz
+        port: 8080
+        httpHeaders:
+        - name: Custom-Header
+          value: Awesome
+      initialDelaySeconds: 3
+      periodSeconds: 3
+```
 
-exemple d'execAction :
 
 
 ## Les resources
