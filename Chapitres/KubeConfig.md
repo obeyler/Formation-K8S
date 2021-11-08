@@ -6,6 +6,7 @@ Il va définir :
 - un ensemble d'utilisateur avec leur crédential 
 - un ensemble de contexts.
 Un context représente couple composé d'un cluster et d'un utilisateur.
+
 ```yaml
 apiVersion: v1
 kind: Config
@@ -29,6 +30,7 @@ contexts:
 - context:
   name: exp-scratch
 ```
+
 Ce qu'il faut retenir c'est que :
 - ce fichier peut vous permettre de référencer plusieurs clusters,
 - ce fichier peut vous permettre de référencer plusieurs utilisateurs qui auront chacun des droits differents
