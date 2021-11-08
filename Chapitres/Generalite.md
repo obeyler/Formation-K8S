@@ -24,6 +24,7 @@ spec:
 à partir de CRD (CustomDefinitionResource)
 
 ## Format générique des Commandes 
+Pour interagir avec un cluster via la ligne de commande l'outil de prédilection est `kubectl`. 
 
 Voici les commandes de base que l'on peut avoir via `kubectl` (liste non exhaustive) :
 Pour récupérer la liste des objets d'un certain type qui n'appartiennent pas spécifiquement à un namespace ou au namespace `default`:
@@ -47,7 +48,17 @@ Pour récupérer un objet d'un certain type qui appartiennent à un namespace :
 ```shell
 kubectl get `TypeDObjet` -n `monnamespace` object
 ```
-Pour récuperer le yaml d'un objet :
+Pour créer un objet à partir d'un fichier (json ou yaml) :
+```shell
+kubectl apply -f  `MonFichier.yaml`
+```
+
+Pour créer un objet à partir d'un fichier (json ou yaml)  dans un namespace spécifique :
+```shell
+kubectl apply -f  `MonFichier.yaml`  -n `monnamespace` 
+```
+
+Pour récupérer le yaml d'un objet :
 ```shell
 kubectl get `TypeDObjet` -n `monnamespace` object -o yaml
 ```

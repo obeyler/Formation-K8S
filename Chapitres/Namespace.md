@@ -7,6 +7,7 @@ Il existe des namespaces spécifiques :
 - default (celui où vous vos objects kubernetes iront si vous ne spécifiez pas de namespace)
 - kube-system (celui utilisé pour les composants system)
 - kube-public (ns visible par tous)
+> On ne peut pas déplacer un objet kubernetes d'un namespace vers un autre namespace.
 
 ## Structure
 ```yaml
