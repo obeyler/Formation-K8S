@@ -1,7 +1,7 @@
 # Pod
 ## Role
 C'est l'unité de base active dans kubernetes, il peut être instancié seul, au sein d'un déploiement ou d'un replicaset ou d'un statefulset ou d'un daemonset.
-Il peut même être `static` quand il est directement instancié par le kubelet via un manifest.
+Il peut même être `static` quand il est directement instancié par le kubelet via un manifest dans /var/lib/kubelet/manifest.
 Hormis le cas ou le pod est static, si vous détruisez un pod il ne reconstruira pas tout seul.
 > On ne peut pas éditer un pod, mais il y a une astuce : on récupère son contenu, on détruit le pod, on modifie le contenu et enfin on le reconstruit :-)
 
@@ -65,8 +65,37 @@ On peut facilement voir les logs d'execution d'un pod.
 `kubectl logs podName -c containerName`
 
 
-## Les probes Readyness/Liveness 
-Le pod offre la possibilité de détecter s'il est opérationnel ou pas par le biais de probe (sonde)
+## Les probes Startup/Liveness/Readyness
+Le pod offre la possibilité de détecter s'il est opérationnel ou pas par le biais de probe (sonde).
+Si un conteneur ne fournit pas de probe, Kubernetes considere que l'état par défaut est Success.
+
+### startupProbe:
+Indique si l'application à l'intérieur du conteneur a démarré.
+Toutes les autres probes sont désactivées si une starup probe est fournie, jusqu'à ce qu'elle réponde avec succès. Si la startup probe échoue, le kubelet tue le conteneur, et le conteneur est assujetti à sa politique de redémarrage.
+
+### livenessProbe
+Indique si le Conteneur est en cours d'exécution. 
+Si la liveness probe échoue, kubelet tue le Conteneur et le Conteneur est soumis à sa politique de redémarrage (restart policy). 
+
+### readinessProbe 
+Indique si le Conteneur est prêt à servir des requêtes. 
+Si la readiness probe échoue, le contrôleur de points de terminaison (Endpoints) retire l'adresse IP du Pod des points de terminaison de tous les Services correspondant au Pod. 
+L'état par défaut avant le délai initial est Failure.
+
+
+
+
+
+
+Plusieurs actions de sonde existent :
+- ExecAction: Exécute la commande spécifiée à l'intérieur du Conteneur. Le diagnostic est considéré réussi si la commande se termine avec un code de retour de 0.
+
+- TCPSocketAction: Exécute un contrôle TCP sur l'adresse IP du Conteneur et sur un port spécifié. Le diagnostic est considéré réussi si le port est ouvert.
+
+- HTTPGetAction: Exécute une requête HTTP Get sur l'adresse IP du Conteneur et sur un port et un chemin spécifiés. Le diagnostic est considéré réussi si la réponse a un code de retour supérieur ou égal à 200 et inférieur à 400.
+
+exemple d'execAction :
+
 
 ## Les resources
 

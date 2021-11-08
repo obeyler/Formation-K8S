@@ -6,7 +6,7 @@ On peut d'ailleurs discuter avec l'APIServer avec des commandes CURL avec les ve
 ## La structure des objets K8S
 Tous les objets kubernetes ont un `kind` qui va donner le type d'objet
 Comme Kubernetes évolue les specifications des objects évoluent aussi d'où la présence d'une `apiVersion`elle donne l'indication de la maturité de l'objet ainsi que la spécification de l'objet à utiliser.   
-Ils ont toujours une section `metadata` qui permet de définir leur nom, leur namespace (s'ils appartiennent à un namespace), et d'autres informtions comme les labels, et annotations 
+Ils ont toujours une section `metadata` qui permet de définir leur nom, leur namespace (s'ils appartiennent à un namespace), et d'autres informations comme les labels, et annotations 
 On comprend mieux alors la structure globale des objects K8S. 
 ```yaml
 apiVersion: versionDeLAPI

@@ -4,7 +4,7 @@ On peut voir les namespaces comme un moyen de classer et compartimenter au sein 
 On peut également appliquer des règles de sécurités au sein d'un namespace et ainsi permettre une isolation entre plusieurs projets.
 
 Il existe des namespaces spécifiques :
-- default (celui où vous vos objects kubernetes iront si vous ne spécifiez pas de namespace)
+- default (celui où vous vos objects kubernetes iront si vous ne spécifiez pas de namespace et si vous ne l'avez pas changé via votre context)
 - kube-system (celui utilisé pour les composants system)
 - kube-public (ns visible par tous)
 > On ne peut pas déplacer un objet kubernetes d'un namespace vers un autre namespace.
