@@ -67,11 +67,12 @@ On peut facilement voir les logs d'execution d'un pod.
 
 ## Les probes Startup/Liveness/Readyness
 Le pod offre la possibilité de détecter s'il est opérationnel ou pas par le biais de probe (sonde).
-Si un conteneur ne fournit pas de probe, Kubernetes considere que l'état par défaut est Success.
+Si un conteneur ne fournit pas de probe, Kubernetes considère que l'état par défaut est Success.
+![schema](https://obeyler.github.io/Formation-K8S/images/probe.drawio.svg)
 
 ### startupProbe:
 Indique si l'application à l'intérieur du conteneur a démarré.
-Toutes les autres probes sont désactivées si une starup probe est fournie, jusqu'à ce qu'elle réponde avec succès. Si la startup probe échoue, le kubelet tue le conteneur, et le conteneur est assujetti à sa politique de redémarrage.
+Toutes les autres probes sont désactivées si une startup probe est fournie, jusqu'à ce qu'elle réponde avec succès. Si la startup probe échoue, le kubelet tue le conteneur, et le conteneur est assujetti à sa politique de redémarrage.
 
 ### livenessProbe
 Indique si le Conteneur est en cours d'exécution. 
