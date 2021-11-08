@@ -47,6 +47,10 @@ kubectl config use-context NOM_DU_CONTEXT
 Pour lister les contexts présents :
 ```
 kubectl config get-contexts
+
+CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
+          default    default    default    
+*         minikube   minikube   minikube   default
 ```
 (une '*' vous pointera le context actuellement utilisé)
 
