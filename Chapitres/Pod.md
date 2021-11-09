@@ -64,6 +64,9 @@ On peut facilement voir les logs d'execution d'un pod.
 - cas un plusieurs containers dans le pod :
 `kubectl logs podName -c containerName`
 
+Si on veut voir les logs d'un pod qui plante et qui redémarre. `kubectl logs podName` donnera les logs du pod redémarré et donc pas la cause du plantage.
+Pour y remédier, on cherche à voir les logs d'avant son redémarrage, il faut faire :
+`kubectl logs podName -p=true `
 
 ## Les probes Startup/Liveness/Readyness
 Le pod offre la possibilité de détecter s'il est opérationnel ou pas par le biais de probe (sonde).
@@ -127,30 +130,5 @@ exemple :
       initialDelaySeconds: 3
       periodSeconds: 3
 ```
-
-
-
-## Les resources
-
-Si pour un Pod les resources sont non définies (ni request ni limit), il pod est considéré comme non prioritaire. 
-Le pod fera partie des premiers à être déplacé au besoin.
-Si le pod a des resources définissent des requests mais pas de limits il fera partie des seconds à être déplacé.
-Si les resources sont définies au niveau request et limit, le Pod est dit prioritaire. 
-Il ne sera tué que s'il dépasse ses limites.
-
-
-### Requests
-Pour placer les Pods, les resources demandées par un pod auront une importance capitale.
-Le Pod signale qu'il a besoin d'une quantité de CPU ou d'une quantité de mémoire.
-Si le Node n'a pas les resources demandées, le Pod ne sera pas installé dessus. 
-Si aucun Node n'a les resources demandées le Pod restera en statut "Pending".
-La somme des Requests des pods présents sur un node  ne peut pas dépasser la capacité de celui-ci.
-### Limits
-Le Pod peut signaler également qu'il ne doit pas dépasser une quantité de CPU ou d'une quantité de mémoire.
-Si le Pod dépense plus il sera tué automatiquement. 
-Un Node peut faire de la sur-allocation car tous les Pods n'atteignent pas leur limit en même temps.
-
-## Les affinity
-
 
 [Retour](https://obeyler.github.io/Formation-K8S/)

@@ -1,6 +1,6 @@
 # Namespace
 ## Role
-On peut voir les namespaces comme un moyen de classer et compartimenter au sein d'un K8S.
+On peut voir les namespaces comme un moyen de classer et compartimenter au sein d'un K8S. On va souvent créer un namespace par produit installé.
 On peut également appliquer des règles de sécurités au sein d'un namespace et ainsi permettre une isolation entre plusieurs projets.
 
 Il existe des namespaces spécifiques :

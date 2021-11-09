@@ -2,11 +2,11 @@
 ## Role
 Une registry docker est un lieu où l'on va stocker et récupérer des images Docker.
 La registry la plus connue est `dockerhub` (https://hub.docker.com) où l'on trouve la plupart des images des produits connus.
-Ce n'est pas la seule ! Chaque grand fournisseur service Cloud (AWS/AZURE,GOOGLE,...) en propose.
+Ce n'est pas la seule ! Une autre registry tres connue et très utilisé quay.io (RedHat). Chaque grand fournisseur service Cloud (AWS/AZURE,GOOGLE,...) en propose, avec plus ou moins de fonctionnalités offertes.
 > La registry dockerhub a mis en place un mécanisme de RateLimiting 
 > (100 pull/6h en anonyme et 200 pull/6h en utilisateur identifié mais gratuit).
 > L'effet produit est que de nombreux projets n'hébergent plus sur dockerhub et qu'il est souvent
-> indispensable de mettre en place un registry mirror.
+> indispensable de mettre en place un registry mirror. 
 ## Registry Privée
 Il n'est pas toujours souhaitable d'exposer ses images docker quand elles sont issues de développements privés. On optera alors pour avoir ce qu'on appelle une registry privée.
 Pour accéder à cette registry privé, docker aura besoin de credential pour s'y connecter. 

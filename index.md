@@ -8,8 +8,9 @@
 ## Kubernetes
 - [Principaux composants K8S](Chapitres/PrincipauxComposants.md)
 - [Différentes Topologies de serveur K8S](Chapitres/TopologieK8S.md)
-- [KubeConfig](Chapitres/KubeConfig.md)
 - [Géneralité](Chapitres/Generalite.md)
+- [KubeConfig](Chapitres/KubeConfig.md)
+- [Principales commmandes](Chapitres/Commandes.md)
 
 ## Principaux objects / concepts K8S
 ### Etape 1 mon premier pod
@@ -23,23 +24,26 @@
 - Tour d'horizon
 - [Deployment](Chapitres/Deployment.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
-- [DaemonSet](Chapitres/Demonset.md)
+- [DaemonSet](Chapitres/Daemonset.md)
 - [StatefulSet](Chapitres/Statefulset.md)
 
 ### Etape 3 - L'exposition
 - [Service](Chapitres/Service.md)
 - [Ingress / ingress Controller](Chapitres/Ingress.md)
 
-### Etape 3 - la persistence
-- Tour d'horizon de la persistance
+### Etape 4 - la persistence
+- [Tour d'horizon de la persistance](Chapitres/Persistence.md)
 - [PersistentVolume](Chapitres/PersistentVolume.md)
 - [StorageClass](Chapitres/StorageClass.md)
 - [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
 - 
-### Etape 4 - La sécurité
+### Etape 5 - le placement des pods
+- [NodeSelector,Resource,Affinity](Chapitres/PodPlacement.md)
+- [Taint et Tolération](Chapitres/Taint.md)
+
+### Etape 6 - La sécurité
 - [RBAC](Chapitres/RBAC.md)
 - SecurityContext
-- [Taint et Tolération](Chapitres/Taint.md)
 
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
