@@ -30,6 +30,7 @@ spec:
       securityContext: {}
 ```
 # Différences par rapport à un pod
+Contrairement à un pod créé sans déploiement, si on demande à kubernetes de tuer un pod, comme le deploiement veut respecter sa specification, il va automatiquement demander une recréation d'un nouveau pod.   
 ## Commandes utiles
 pour créer rapidement un deploiement via une commande
 ```

@@ -1,8 +1,8 @@
 # Principaux composants K8S
 Kubernetes un légo pour développeur ? Oui, on peut le penser.
 
-## Que fait un Kubernetes ?
-Kubernetes est un orchestrateur, son rôle sera de fournir une infrastructure pour exécuter des containers sur des machines.
+## Qu'est ce que Kubernetes ?
+Kubernetes est un orchestrateur, son rôle sera d'être une infrastructure capable exécuter des containers sur des machines.
 Il va se charger de placer les containers en fonction des contraintes qui lui sont fournis et va les surveiller pour au besoin agir dessus.
 Il va se charger d'offrir un service discovery pour que les containers puissent se parler facilement.
 Il a peu à peu intégré des évolutions liées à la sécurité pour répondre de plus en plus aux contraintes de production.
