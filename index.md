@@ -10,7 +10,7 @@
 - [Différentes Topologies de serveur K8S](Chapitres/TopologieK8S.md)
 - [Géneralité](Chapitres/Generalite.md)
 - [KubeConfig](Chapitres/KubeConfig.md)
-- [Principales commmandes](Chapitres/Commandes.md)
+- [Principales commandes](Chapitres/Commandes.md)
 
 ## Principaux objects / concepts K8S
 ### Etape 1 mon premier pod
@@ -21,7 +21,7 @@
 - [Secret](Chapitres/Secret.md)
 
 ### Etape 2 - les autres moyens d'avoir des pods
-- Tour d'horizon
+- [Tour d'horizon](Chapitres/Workload.md)
 - [Deployment](Chapitres/Deployment.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [DaemonSet](Chapitres/Daemonset.md)
