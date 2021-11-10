@@ -22,14 +22,32 @@ Regardons en détail les effets :
 - `NoExecute` Les pod qui ne tolèrent pas cette taint sont expulsés du node 
 
 ## Role de la toleration
-Elles servent à un pod pour dire qu'il accepte la contrainte posée par une taint. Un Pod peut tolérer une taint seulement un temps limité. 
-Cas exemple : il peut tolérer d'être sur un Node Master le temps que son Worker se reconstruise.
+Elles servent à un pod pour dire qu'il accepte la contrainte posée par une taint.
+
 
 > Attention tolérer une taint n'implique pas pour le pod de forcement aller sur le node qui porte cette taint.
 ## Structure
 ```yaml
-
-
+tolerations:
+- key: "key1"
+  operator: "Equal"
+  value: "value1"
+  effect: "NoSchedule"
 ```
+
+`operator` peut prendre la valeur `Exists`  (plus besoin de fournir de valeur), ou `Equal`
+
+Un Pod peut tolérer une taint seulement un temps limité.
+Ainsi dans le cas où l'effet est `NoSchedule`, la toleration peut préciser une durée en seconde. Après le pod sera reschedulé ailleurs.
+Cas exemple : il peut tolérer d'être sur un Node Master le temps que son Worker se reconstruise ou attendre un laps de temps qu'une situation dégradée se résolve.
+
+```yaml
+tolerations:
+- key: "node.kubernetes.io/unreachable"
+  operator: "Exists"
+  effect: "NoExecute"
+  tolerationSeconds: 6000
+```
+
 
 [Retour](https://obeyler.github.io/Formation-K8S/)
