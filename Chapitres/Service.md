@@ -27,16 +27,24 @@ Au sein d'un cluster Kubernetes les services sont joignables en
 - nomduservice.nomDeSonNamespace.svc # depuis n'importe quel namespace 
 
 ## Les différents types 
-### ClusterIP (valeur par défaut quand non spécifiée)
+- ClusterIP (valeur par défaut quand non spécifiée)
+
 Le service n'est joignable que depuis le cluster et via du port-forwarding, il possédera une IP sur le réseau de service.` 
 >Le fait de préciser un NodePort n'est pas compatible avec le type ClusterIP. Il faut donc penser à supprimer le nodeport alloué si vous voulez changer le type du service pour ClusterIP
-### NodePort
+
+- NodePort
+
 Le service est joignable sur chaque Node du cluster depuis un port compris entre 30000 et 32767.
 Le NodePort peut être fixé lors de la création du service, à défaut Kubernetes en allouera automatiquement.
-## Loadbalancer
+
+- Loadbalancer
+
 Le service va monter un NodePort et demander au Cluster d'être mappé sur un LoadBalancer externe fournit par le iaas.
-### ExternalName
+
+- ExternalName
+
 Le service va router vers un service externe via son FQDN.
+
 ## Commandes utiles
 ```
 kubectl expose deployment nginx --port=80 --target-port=8000
