@@ -3,7 +3,10 @@
 Un pod a une ip non prédictible et il est très volatile.
 Il peut être détruit à tout moment pour être reconstruit ailleurs.
 Il est impossible donc de se fier à son ip pour discuter avec lui, c'est la raison d'être d'un service.
-Il joue le role de loadbalancer entre les pods qu'il représente.
+Le service  joue le role de loadbalancer entre les pods qu'il représente.
+Il peut exposer à l'exterieur du cluster via un NodePort (port identique sur tous les nodes)
+
+![schema](https://obeyler.github.io/Formation-K8S/images/service.svg)
 ## Structure
 ```yaml
 apiVersion: v1
