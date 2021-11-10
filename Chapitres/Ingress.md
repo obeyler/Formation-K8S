@@ -62,7 +62,13 @@ kubectl create ingress simple --rule="foo.com/bar=svc1:8080,tls=my-cert"
 ## FAQ
 >Peut on avoir plusieurs IngressController ?
 
-Tout à fait un même cluster peut héberger plusieurs ingresscontroller,  
+Tout à fait un même cluster peut héberger plusieurs ingress controller, dans ce cas il convient de préciser via une annotation
+quel Ingress Class utiliser
+```yaml
+  annotations:
+    kubernetes.io/ingress.class: nginx
+```
+
 
 > Quel sont les principaux ingress Controllers du marché
 
