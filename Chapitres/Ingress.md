@@ -3,7 +3,7 @@
 Le but d'un Ingress est de fournir des informations nécessaires à un ingress controller.
 L'ingressController va effectuer un routage vers différents services à l'intérieur du cluster en fonction d'informations présentes dans la requête http/https. 
 L'Ingress peut également donner l'indication à l'ingress controller quel certificat il doit presenter.
-![schema](https://obeyler.github.io/Formation-K8S/images/Ingress.svg)
+![schema](https://obeyler.github.io/Formation-K8S/images/ingress.svg)
 
 
 ## Structure d'un Ingress
