@@ -11,3 +11,6 @@ Par exemples :
 
 > Attention : Le daemonset ne s'affranchi pas des contraintes posées sur le cluster : taint/resources/...
 > ie si un pod n'a pas le droit de s'installer sur un Node il n'y sera pas 
+
+
+[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Statefulset.md)

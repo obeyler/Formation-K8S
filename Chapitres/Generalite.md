@@ -38,3 +38,5 @@ status:
 
 > Kubernetes offre également l'opportunité d'étendre ses concepts et utiliser sa capacité à faire du CRUD pour de nouveaux objects.
 à partir de CRD (CustomDefinitionResource)
+
+[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/KubeConfig.html)

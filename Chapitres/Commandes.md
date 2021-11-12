@@ -150,3 +150,5 @@ storage.k8s.io/v1
 storage.k8s.io/v1beta1
 v1
 ```
+
+[Retour](https://obeyler.github.io/Formation-K8S/)  [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Namespace.html)
