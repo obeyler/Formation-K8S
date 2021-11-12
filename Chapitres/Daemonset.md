@@ -13,4 +13,4 @@ Par exemples :
 > ie si un pod n'a pas le droit de s'installer sur un Node il n'y sera pas 
 
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Statefulset.html)
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/StatefulSet.html)
