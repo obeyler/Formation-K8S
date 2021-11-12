@@ -27,5 +27,33 @@ data:
 ## Commandes utiles
 décoder un secret
 `kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode`
+## Exercices
+- créer un secret nommée "monsecret" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant
+  monapplication.properties
+```properties
+test = "345"
+ville = "toulouse"
+```
+
+fichier.yaml
+```yaml
+test: "345"
+legume:
+  couleur: "orange"
+  nom: "carotte"
+ville: "toulouse"
+```
+- comparer le yaml du secret monsecret avec celui de la configmap maconfigmap 
+- créer le secret suivant :
+````yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: monsecret
+type: Opaque
+data:
+  password: YmluZ28gZsOpbGljaXRhdGlvbg==
+````
+- décoder ce secret en utilisant une ligne de commande
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Workload.html)
