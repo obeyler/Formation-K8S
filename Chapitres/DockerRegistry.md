@@ -17,7 +17,7 @@ docker login URL-REGISTRY
 ce qui aura pour effet de completer le fichier `~/.docker/config.json` 
 
 ## Registry auto hébergée
-Plusieurs projets open-source ([Harbor](../Tools/Harbor.md), [JCR](../Tools/Arifactory.md),...) vous permettent de facilement avoir votre propre registry. 
+Plusieurs projets open-source ([Harbor](../Tools/Harbor.md), [JCR](../Tools/Artifactory.md),...) vous permettent de facilement avoir votre propre registry. 
 
 Les avantages d'une registry auto hébergée sont multiples :
 - vous pouvez mieux controller ce qui sera sur votre cluster. 
@@ -33,4 +33,4 @@ Pour contrer le rate limiting imposé par dockerhub, on peut utiliser des regist
 }
 ```
 
-[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/DockerForceFaiblesse.html) 
+[Menu](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/DockerForceFaiblesse.html) 

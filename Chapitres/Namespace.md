@@ -51,4 +51,4 @@ Seulement en dernier recours supprimer le finalizer du namespace
 - affichage du yaml de votre namespace
 - suppression de votre namespace
 
-[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 

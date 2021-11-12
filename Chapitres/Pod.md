@@ -131,4 +131,4 @@ exemple :
       periodSeconds: 3
 ```
 
-[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)

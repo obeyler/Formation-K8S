@@ -25,7 +25,7 @@
 - [Deployment](Chapitres/Deployment.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [DaemonSet](Chapitres/Daemonset.md)
-- [StatefulSet](Chapitres/Statefulset.md)
+- [StatefulSet](Chapitres/StatefulSet.md)
 
 ### Etape 3 - L'exposition
 - [Service](Chapitres/Service.md)
@@ -64,7 +64,7 @@
 - [Falco](Tools/Falco.md)
 - [Artifactory/Jcr](Tools/Artifactory.md)
 - [Rancher](Tools/Rancher.md)
-- [Artifact.io](Tools/ArtifactIo.md)
+- [Artifacthub.io](https://artifacthub.io)
 - [Trivy](Tools/Trivy.md)
 ### Force / Faiblesse
 
