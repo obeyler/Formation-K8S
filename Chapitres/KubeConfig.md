@@ -38,14 +38,15 @@ Ce qu'il faut retenir c'est que :
 - on peut décomposer ce fichier en n fichiers 
 - peut vous permettre de changer le nom du namespace par défaut 
 
-## Commandes utiles
+## Commandes utiles pour jouer avec un .kube/config
 
-Pour passer sur un context `NOM_DU_CONTEXT`:
-```
-kubectl config use-context NOM_DU_CONTEXT
+Pour lister les utilisateurs ou les clusters :
+```shell
+kubectl config get-users
+kubectl config get-clusters
 ```
 Pour lister les contexts présents :
-```
+```shell
 kubectl config get-contexts
 
 CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
@@ -54,8 +55,18 @@ CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
 ```
 (une '*' vous pointera le context actuellement utilisé)
 
-Pour utiliser un context `NOM_DU_CONTEXT` seulement pour une commande Kubectl sans changer le context courant :
+Pour créer/modifier un context :
+```shell
+kubectl config set-context NOM_DU_CONTEXT --cluster CLUSTER_NAME --user USER_NAME (--namespace=MON_NAMESPACE)
 ```
+Pour passer sur un context `NOM_DU_CONTEXT`:
+```shell
+kubectl config use-context NOM_DU_CONTEXT
+```
+
+
+Pour utiliser un context `NOM_DU_CONTEXT` seulement pour une commande Kubectl sans changer le context courant :
+```shell
 kubectl VOTRE_COMMANDE --context NOM_DU_CONTEXT
 ```
 
@@ -68,6 +79,11 @@ Pour changer sur le context courant le nom du namespace par défaut pour `MYNAME
 ```
 kubectl config set-context --current --namespace=MYNAMESPACE
 ```
-
+## Exercice :
+- Afficher les noms des utilisateurs 
+- Afficher les noms des clusters 
+- Créer un nouveau contexte qui prendrait un namespace par défaut le namespace "TOTO" 
+- Afficher les contextes
+- Sélectionner ce contexte pour qu'il devienne votre contexte par defaut
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Commandes.html)

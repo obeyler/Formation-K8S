@@ -47,8 +47,10 @@ Il arrive que lors d'une suppression de namespace celui-ci reste bloqué en mode
 Seulement en dernier recours supprimer le finalizer du namespace
 
 ## Exercice:
-- Création de votre namespace 
-- affichage du yaml de votre namespace
-- suppression de votre namespace
+- Création d'un namespace "TEST-NOM-PRENOM"
+- Création d'un deuxieme namespace "NOM-PRENOM"
+- Affichage du yaml de votre namespace
+- Lister les namespaces
+- Modifier contexte qui prendrait un namespace par défaut votre namespace "NOM-PRENOM"
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 
