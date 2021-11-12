@@ -55,12 +55,16 @@ spec:
 ```
 ## Commandes utiles
 Pour créer un pod à partir d'une image docker : 
-`kubectl run --image nginx nginx`
+```shell
+kubectl run --image nginx nginx
+```
 
 ## Logs
 On peut facilement voir les logs d'execution d'un pod.
 - cas un seul container dans le pod :
-`kubectl logs podName`
+```shell
+kubectl logs podName
+```
 - cas un plusieurs containers dans le pod :
 `kubectl logs podName -c containerName`
 
@@ -130,5 +134,18 @@ exemple :
       initialDelaySeconds: 3
       periodSeconds: 3
 ```
+
+## Exercice:
+- Création d'un pod nommé `test` ayant un container avec comme image `nginx` dans votre namespace "TEST-NOM-PRENOM"
+- Par édition, essayez de le déplacer dans votre namespace NOM-PRENOM, constat ?
+- Suppression du namespace "TEST-NOM-PRENOM"
+- Lister les pods du namespace "TEST-NOM-PRENOM", Qu'est devenu votre pod ?
+- lancer la commande suivante :
+```shell
+kubectl run mytimer --image=busybox:1.28 --command  -- "sh" "-c" "while(true) do sleep 10; date; done"
+```
+- Affichage des logs de ce pod
+- Affichage du yaml de ce pod
+- détruire ce pod
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)
