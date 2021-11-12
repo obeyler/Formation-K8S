@@ -33,4 +33,4 @@ Pour contrer le rate limiting imposé par dockerhub, on peut utiliser des regist
 }
 ```
 
-[Retour](https://obeyler.github.io/Formation-K8S/)
+[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/DockerForceFaiblesse.html) 

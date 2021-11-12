@@ -125,4 +125,4 @@ Création d'une configmap à partir de fichier:
 kubectl create cm -n NameSpace MyCM --from-file=toto.txt
 ```
 
-[Retour](https://obeyler.github.io/Formation-K8S/)
+[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Secret.html)
