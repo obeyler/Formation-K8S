@@ -28,4 +28,4 @@ data:
 décoder un secret
 `kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode`
 
-[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Workload.html)
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Workload.html)

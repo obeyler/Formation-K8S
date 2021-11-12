@@ -43,4 +43,4 @@ deployment.apps/nginx created
 
 
 
-[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/HorizontalPodAutoScaling.html)
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/HorizontalPodAutoScaling.html)

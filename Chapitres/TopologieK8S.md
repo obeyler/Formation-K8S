@@ -24,4 +24,4 @@ Note: Un nombre impair de nœud pour le cluster ETCD est toujours nécessaire. P
 - ETCD avec 5 nœuds = tolérance de deux pannes (la majorité correspond à 3/5 nœuds)
 - etc. 
 
-[Retour](https://obeyler.github.io/Formation-K8S/) [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Generalite.html)
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Generalite.html)
