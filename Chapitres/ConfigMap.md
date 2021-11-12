@@ -124,5 +124,21 @@ Création d'une configmap à partir de fichier:
 ```
 kubectl create cm -n NameSpace MyCM --from-file=toto.txt
 ```
+## Exercices
+- créer une configmap nommée "maconfigmap" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant
+monapplication.properties
+```properties
+test = "345"
+ville = "toulouse"
+```
+
+fichier.yaml
+```yaml
+test: "345"
+legume:
+  couleur: "orange"
+  nom: "carotte"
+ville: "toulouse"
+```
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Secret.html)
