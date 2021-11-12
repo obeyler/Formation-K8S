@@ -148,6 +148,7 @@ kubectl run mytimer --image=busybox:1.28 --command  -- "sh" "-c" "while(true) do
 - Affichage du yaml de ce pod
 - Refaire un pod avec comme précédemment mais qui aurait une sonde définie ainsi
   (aide : `kubectl get pod mytimer -o yaml> monpod.yaml`)
+
 ```yaml
 readinessProbe:
   exec: 
