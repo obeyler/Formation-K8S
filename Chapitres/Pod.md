@@ -159,9 +159,10 @@ readinessProbe:
   periodSeconds: 5
 ```
 - Regarder son état
-- Exécuter qui va créer un fichier /tmp/file.txt
+- Exécuter cette commande qui va créer un fichier /tmp/file.txt
 `kubectl exec mytimer -- touch /tmp/file.txt`
 - Regarder son état
+- Exécuter cette commande qui va supprimer le fichier /tmp/file.txt
 `kubectl exec mytimer -- rm /tmp/file.txt`
 - Regarder son état
 
