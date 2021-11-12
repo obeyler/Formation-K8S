@@ -2,9 +2,11 @@
 Kubernetes un légo pour développeur ? Oui, on peut le penser.
 
 ## Qu'est ce que Kubernetes ?
+Kubernetes version 1.0 est sorti le 21 juillet 2015, projet initialement incubé par Google puis offert à la Cloud Native Computing Foundation.
 Kubernetes est un orchestrateur, son rôle sera d'être une infrastructure capable exécuter des containers sur des machines.
 Il va se charger de placer les containers en fonction des contraintes qui lui sont fournis et va les surveiller pour au besoin agir dessus.
 Il va se charger d'offrir un service discovery pour que les containers puissent se parler facilement.
+Il va également chercher à offrir de la scalabilité.
 Il a peu à peu intégré des évolutions liées à la sécurité pour répondre de plus en plus aux contraintes de production.
 
 ## Comment le fait-il ?
