@@ -135,7 +135,7 @@ exemple :
       periodSeconds: 3
 ```
 
-## Exercice:
+## Exercices :
 - Création d'un pod nommé `test` ayant un container avec comme image `nginx` dans votre namespace "TEST-NOM-PRENOM"
 - Par édition, essayez de le déplacer dans votre namespace NOM-PRENOM, constat ?
 - Suppression du namespace "TEST-NOM-PRENOM"
@@ -146,6 +146,22 @@ kubectl run mytimer --image=busybox:1.28 --command  -- "sh" "-c" "while(true) do
 ```
 - Affichage des logs de ce pod
 - Affichage du yaml de ce pod
-- détruire ce pod
+- Refaire un pod avec comme précédemment mais qui aurait une sonde définie ainsi
+  (aide : `kubectl get pod mytimer -o yaml> monpod.yaml`)
+```yaml
+readinessProbe:
+  exec: 
+    command:
+    - cat
+    - "/tmp/file.txt"
+  initialDelaySeconds: 15
+  periodSeconds: 5
+```
+- Regarder son état
+- Exécuter qui va créer un fichier /tmp/file.txt
+`kubectl exec mytimer -- touch /tmp/file.txt`
+- Regarder son état
+`kubectl exec mytimer -- rm /tmp/file.txt`
+- Regarder son état
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)

@@ -1,5 +1,6 @@
 # Docker Forces et Faiblesses
-Comme la formation n'est pas dédiée à Docker (ni au machine virtuelle), mais à Kubernetes, voyons rapidement ce qui peut vous pousser à passer de l'un à l'autre en passant en revue les forces et faiblesses. 
+Comme la formation n'est pas dédiée à Docker (ni au machine virtuelle), mais à Kubernetes.
+Voyons rapidement ce qui peut vous pousser malgré les forces de docker à utiliser kubernetes. 
 
 ## Forces
 ### La vitesse de lancement  
