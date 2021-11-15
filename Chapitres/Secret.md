@@ -1,10 +1,11 @@
 # Secret
 ## Roles
 Ils ont plusieurs usages :
-Comme pour les configmap les secrets sont utilisés par les pods comme variables d'environnement ou comme fichiers.
-Ils servent aussi pour les ingress pour fournir les certificats.
-Ils servent à donner les crédentials pour être en mesure de récuperer des images sur un registry docker protégé.
-S'ils ont leur données encodées (en base 64), il faut bien réaliser que les données d'un secret ne sont pas encryptées.
+- Comme pour les configmap les secrets sont utilisés par les pods comme variables d'environnement ou comme fichiers.
+- Ils servent aussi pour les ingress pour fournir les certificats.
+- Ils servent à donner les crédentials pour être en mesure de récuperer des images sur un registry docker protégé ou acceder à un serveur ssh ou du basic auth.
+
+S'ils ont leurs données encodées (en base 64), il faut bien réaliser que les données d'un secret ne sont pas encryptées.
 
 ## Structure
 ```yaml
@@ -24,9 +25,13 @@ data:
 - kubernetes.io/dockerconfigjson (un Docker sérialisé config. json fichier, pour fournir les informations d'identification Docker) 
 - kubernetes.io/ssh-auth (fournir les informations d'identification SSH).
 - kubernetes.io/basic-auth (fournit des crédentials type basic auth)
+
 ## Commandes utiles
 décoder un secret
-`kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode`
+```
+kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode
+```
+
 ## Exercices
 - créer un secret nommée "monsecret" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant
   monapplication.properties
