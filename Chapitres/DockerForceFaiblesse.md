@@ -32,7 +32,7 @@ La gestion de ses mapping de ports qui peut paraitre simple au début, va poser 
 Docker n'offre pas nativement de ServiceDiscovery.
 Le placement des containers sur les machines, va se faire à la main, c'est fastidieux. 
 Qui mettre ensemble ? Qui séparer ? Est ce la même répartition si on change de type de machine ? 
-Quand on décide de réorganiser le placement sur les machines (Il faut refaire les ports mapping !),
+Quand on décide de réorganiser le placement sur les machines (Il faut refaire les ports mapping et les configurations ! ),
 ça devient un véritable calvaire. 
 
 ![schema](https://obeyler.github.io/Formation-K8S/images/docker-portmapping.drawio.svg)
