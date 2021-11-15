@@ -7,7 +7,13 @@ On peut placer un pod en fonction des labels qui sont posés sur les Nodes. Si u
   nodeSelector:
     disktype: ssd
 ```
-Il est a noté que les Nodes ont de base plusieurs labels present
+Il est a noté que les Nodes ont de base plusieurs labels présents.
+```shell
+kubectl get node --show-labels
+
+NAME       STATUS   ROLES    AGE    VERSION   LABELS
+minikube   Ready    <none>   330d   v1.22.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=minikube,kubernetes.io/os=linux
+```
 
 ### Les resources
 Les resources demandées par le pod vont être utiles au scheduler pour savoir où placer le pod mais pas seulement.
