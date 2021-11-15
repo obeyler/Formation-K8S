@@ -38,7 +38,7 @@ kubectl delete ns monnamespace
 ## Namespace bloqué en mode _Terminating_
 
 Il arrive que lors d'une suppression de namespace celui-ci reste bloqué en mode `Terminating` cela peut être dû à plusieurs causes.
-- une api de service est casée (comme toutes les api de service vont être sollicitées lors de la destruction si une dysfonctionne cela bloque la destruction)  
+- une api de service est cassée (comme toutes les api de service vont être sollicitées lors de la destruction si une dysfonctionne cela bloque la destruction)  
 => vérifier l'état de vos api `kubectl get apiservice`
 - un pod reste bloqué en destruction
 => 'kubectl delete pod NOMDUPOD -n NAMESPACE --force`
