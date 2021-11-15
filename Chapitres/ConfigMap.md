@@ -141,4 +141,4 @@ legume:
 ville: "toulouse"
 ```
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Secret.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Secret.html)

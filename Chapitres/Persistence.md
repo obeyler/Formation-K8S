@@ -5,4 +5,5 @@ La persistance est un point dur sur Kubernetes. Il ne faut surtout pas négliger
 Suivant son implémentation, elle rend portable ou pas votre déploiement.
 
 
-[Menu](https://obeyler.github.io/Formation-K8S/),
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Ingress.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/StorageClass.html)
+

@@ -33,4 +33,4 @@ spec:
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10 
 ```
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Daemonset.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Deployment.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Daemonset.html)

@@ -151,4 +151,4 @@ storage.k8s.io/v1beta1
 v1
 ```
 
-[Menu](https://obeyler.github.io/Formation-K8S/),  [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Namespace.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/KubeConfig.html), [Menu](https://obeyler.github.io/Formation-K8S/),  [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Namespace.html)

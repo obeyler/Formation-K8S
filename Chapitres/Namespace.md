@@ -53,4 +53,4 @@ Seulement en dernier recours supprimer le finalizer du namespace
 - Lister les namespaces
 - Modifier contexte qui prendrait un namespace par défaut votre namespace "NOM-PRENOM"
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Commandes.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 

@@ -86,4 +86,4 @@ kubectl config set-context --current --namespace=MYNAMESPACE
 - Afficher les contextes
 - Sélectionner ce contexte pour qu'il devienne votre contexte par defaut
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Commandes.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Generalite.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Commandes.html)
