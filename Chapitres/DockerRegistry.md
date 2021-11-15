@@ -26,11 +26,34 @@ Les avantages d'une registry auto hébergée sont multiples :
 - vous affranchir des rate limiting
 - définir des politiques de scan d'images pour être informé de CVE via des outils annexes tel que [Trivy](../Tools/Trivy.md) ou Clair
 ## Registry mirror
-Pour contrer le rate limiting imposé par dockerhub, on peut utiliser des registry mirror pour cela il suffira de les ajouter dans le fichier `/etc/docker/daemon.json`
-```
+Pour contrer le rate limiting imposé par dockerhub, on peut utiliser des registry mirror 
+
+- Pour Docker :
+
+Pour cela il suffira de les ajouter dans le fichier `/etc/docker/daemon.json`
+```json
 {
 "registry-mirrors": ["https://<my-docker-mirror-host>"]
 }
 ```
+- Pour ContainerD :
+
+Pour cela il suffira de les ajouter dans le fichier `/etc/conainerd/config.toml` (à noter que ContainerD supporte des mirrors pour des repository autres que docker.io !)
+
+```
+[plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+    endpoint = ["https://registry-1.docker.io"]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."test.https-registry.io"]
+    endpoint = ["https://HostIP1:Port1"]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."test.http-registry.io"]
+    endpoint = ["http://HostIP2:Port2"]
+  # wildcard matching is supported but not required.
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."*"]
+    endpoint = ["https://HostIP3:Port3"]
+```
+
+## Fonctionnalités avancées
+> Attention à l'usage de certaines fonctionnalités sur les RegistryDocker qui peuvent être alléchantes. 
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/DockerCommand.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/DockerForceFaiblesse.html) 
