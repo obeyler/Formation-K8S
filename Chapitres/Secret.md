@@ -50,7 +50,7 @@ ville: "toulouse"
 ```
 - comparer le yaml du secret monsecret avec celui de la configmap maconfigmap 
 - créer le secret suivant :
-````yaml
+```yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -58,7 +58,7 @@ metadata:
 type: Opaque
 data:
   password: YmluZ28gZsOpbGljaXRhdGlvbg==
-````
+```
 - décoder ce secret en utilisant une ligne de commande
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Workload.html)
