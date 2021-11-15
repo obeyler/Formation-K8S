@@ -35,6 +35,7 @@ Qui mettre ensemble ? Qui séparer ? Est ce la même répartition si on change d
 Quand on décide de réorganiser le placement sur les machines (Il faut refaire les ports mapping !),
 ça devient un véritable calvaire. 
 
+![schema](https://obeyler.github.io/Formation-K8S/images/docker-portmapping.drawio.svg)
 
 
 [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PrincipauxComposants.html)
