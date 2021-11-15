@@ -22,5 +22,5 @@ spec:
     path: "/mnt/data"
 ```
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Persistent.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PeristentVolumeClaim.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Persistence.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PeristentVolumeClaim.html)
 
