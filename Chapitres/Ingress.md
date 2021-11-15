@@ -80,4 +80,5 @@ quel Ingress Class utiliser
 - contour (https://github.com/heptio/contour)
 - kong (https://github.com/Kong/kubernetes-ingress-controller)
 
-[Menu](https://obeyler.github.io/Formation-K8S/),
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Service.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Persistence.html)
+

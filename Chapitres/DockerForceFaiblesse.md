@@ -38,4 +38,4 @@ Quand on décide de réorganiser le placement sur les machines (Il faut refaire 
 ![schema](https://obeyler.github.io/Formation-K8S/images/docker-portmapping.drawio.svg)
 
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PrincipauxComposants.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/DockerRegistry.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PrincipauxComposants.html)

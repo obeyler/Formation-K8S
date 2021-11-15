@@ -37,4 +37,4 @@ Contrairement à un Label, on ne peut pas faire de recherche selective sur une a
 - rechercher tous les pods qui ont le label "run=mytimer"
 - annoter tous les pods de votre namespace qui ont le label "run=mytimer" avec l'annotation 'myname=moi'
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/ConfigMap.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/ConfigMap.html)

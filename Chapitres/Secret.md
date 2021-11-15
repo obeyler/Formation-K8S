@@ -61,4 +61,4 @@ data:
 ```
 - décoder ce secret en utilisant une ligne de commande
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Workload.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/ConfigMap.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Workload.html)

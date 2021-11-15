@@ -25,8 +25,10 @@ spec:
 Au sein d'un cluster Kubernetes les services sont joignables en
 - nomduservice # au sein du meme namespace
 - nomduservice.nomDeSonNamespace.svc # depuis n'importe quel namespace 
+Le DNS est le plus souvent fournit par le composant CoreDNS.
 
-## Les différents types 
+
+## Les différents types de service
 - ClusterIP (valeur par défaut quand non spécifiée)
 
 Le service n'est joignable que depuis le cluster et via du port-forwarding, il possédera une IP sur le réseau de service.` 
@@ -46,8 +48,9 @@ Le service va monter un NodePort et demander au Cluster d'être mappé sur un Lo
 Le service va router vers un service externe via son FQDN.
 
 ## Commandes utiles
-```
+```shell
 kubectl expose deployment nginx --port=80 --target-port=8000
 ```
 
-[Menu](https://obeyler.github.io/Formation-K8S/),
+[Menu](https://obeyler.github.io/Formation-K8S/),[Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Ingress.html)
+

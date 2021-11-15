@@ -16,7 +16,6 @@
 ### Etape 1 mon premier pod
 - [Namespace](Chapitres/Namespace.md)
 - [Pod](Chapitres/Pod.md)
-- [Placement d'un Pod](Chapitres/PodPlacement.md)
 - [Label Annotation](Chapitres/LabelAnnotation.md) 
 - [ConfigMap](Chapitres/ConfigMap.md) 
 - [Secret](Chapitres/Secret.md)
