@@ -29,6 +29,10 @@ Contrairement à un Label, on ne peut pas faire de recherche selective sur une a
 ```kubectl label pods my-pod new-label-```
 - pour voir les labels
 ```kubectl get pods --show-labels```
+- pour sélectionner des pods par leur label
+```kubectl get pods -l run ```
+on peut préciser la valeur que doit prendre le label
+  ```kubectl get pods -l run=timer ```
 - pour annoter un pod
 ```kubectl annotate pods my-pod icon-url=http://goo.gl/XXBTWq```
 
