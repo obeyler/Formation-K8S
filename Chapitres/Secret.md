@@ -6,6 +6,7 @@ Ils ont plusieurs usages :
 - Ils servent à donner les crédentials pour être en mesure de récuperer des images sur un registry docker protégé ou acceder à un serveur ssh ou du basic auth.
 
 S'ils ont leurs données encodées (en base 64), il faut bien réaliser que les données d'un secret ne sont pas encryptées.
+Ainsi, il suffit d'utiliser l'utilitaire `base64` pour décoder leur contenu.
 
 ## Structure
 ```yaml
@@ -27,8 +28,8 @@ data:
 - kubernetes.io/basic-auth (fournit des crédentials type basic auth)
 
 ## Commandes utiles
-décoder un secret
-```
+Décoder un secret avec `base64` :
+```shell
 kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --decode
 ```
 
