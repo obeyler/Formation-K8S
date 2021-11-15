@@ -115,17 +115,17 @@ spec:
 ```
 
 ## Commandes utiles
-Création d'une configmap à partir d'une serie de clef/valeur:
+Création d'un configmap à partir d'une série de clef/valeur:
 ```
-kubectl create cm -n NameSpace MyCM --from-literal=test=valeur
+kubectl create cm -n NameSpace MyCM --from-literal=test=valeur --from-literal=test2=valeur2
 ```
 
-Création d'une configmap à partir de fichier:
+Création d'un configmap à partir de fichier:
 ```
 kubectl create cm -n NameSpace MyCM --from-file=toto.txt
 ```
 ## Exercices
-- créer une configmap nommée "maconfigmap" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant
+- créer un configmap nommé "maconfigmap" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant
 monapplication.properties
 ```properties
 test = "345"
