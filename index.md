@@ -43,7 +43,13 @@
 
 ### Etape 6 - La sécurité
 - [RBAC](Chapitres/RBAC.md)
-- SecurityContext
+- [SecurityContext](Chapitres/SecurityContext.md)
+- [NetworkPolicy](Chapitres/NetworkPolicy.md)
+
+### Etape 7 - Packaging
+- [Helm](Tools/Helm)
+- [Kustomize](Tools/Kustomize.md)
+- [Opérateur]( Tools/Operateur.md)
 
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
@@ -52,8 +58,8 @@
 - [Lab 3](Exercices/Lab-004.md) (RBAC)
 
 ## Ecosysteme & outils
-- [Helm](Tools/Helm)
-- [Kustomize](Tools/Kustomize.md)
+
+
 - [Metric-server](Tools/MetricServer)
 - [Cert-manager](Tools/CertManager.md)
 - [Prometheus](Tools/Prometheus.md)

@@ -46,9 +46,67 @@ Si le Pod dépense plus il sera tué automatiquement.
 Un Node peut faire de la sur-allocation car tous les Pods n'atteignent pas leur limit en même temps.
 
 ### Les affinity
-### Node Affinity/AntiAffinity
+### Node Affinity
+ Il existe deux types de NodeAffinity : 
+ `requiredDuringSchedulingIgnoredDuringExecution` ou `preferredDuringSchedulingIgnoredDuringExecution`
+l'un oblige le scheduler, l'autre l'incite au placement. Comme indiqué dans leur nom, ils n'ont aucun effet une fois le pod lancé.
 
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd            
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+```
 
 ### Pod Affinity/AntiAffinity
+Là on va jouer sur les attirances/répulsions entre Pod. Il peut être intéressant de placer des Pods ensembles. Par exemple, mettre le backend à coté de sa bdd.
+Il peut aussi intéressant d'éviter que des pods soient sur le même Node. Par exemple, si on lance plusieurs Pods pour faire de la HauteDispo, les laisser se mettre sur le même Node serait une erreur.
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: redis-cache
+spec:
+    selector:
+        matchLabels:
+            app: store
+    replicas: 3
+    template:
+        metadata:
+            labels:
+                app: store
+        spec:
+            affinity:
+                podAntiAffinity:
+                    requiredDuringSchedulingIgnoredDuringExecution:
+                        - labelSelector:
+                              matchExpressions:
+                                  - key: app
+                                    operator: In
+                                    values:
+                                        - store
+                          topologyKey: "kubernetes.io/hostname"
+            containers:
+                - name: redis-server
+                  image: redis:3.2-alpine
+```
+Ici les Pods Redis seront disposés de telle manière qu'ils ne seront jamais 2 sur le même Node en même temps. 
+On peut mettre `podAffinity` et `podAntiAffinity`  
+
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PersistentVolumeClaim.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)
