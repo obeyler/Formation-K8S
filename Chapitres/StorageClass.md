@@ -6,6 +6,7 @@ Différentes classes peuvent correspondre à des niveaux de qualité de service,
 La StorageClass va s'appuyer sur un provisioner qui lui fournira des PersistentVolumes 
 voir une liste non exhaustive de provisioner : [https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner)
 
+> On peut définir une StorageClass par défaut dans un cluster (mais qu'une seule à la fois !)
 
 ## Structure
 ```yaml

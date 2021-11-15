@@ -19,7 +19,12 @@ kind: PersistentVolumeClaim
 metadata:
   name: task-pv-claim
 spec:
-  #storageClassName: manual
+  storageClassName: manual
+  #selector:
+  #  matchLabels:
+  #    release: "stable"
+  #  matchExpressions:
+  #    - {key: environment, operator: In, values: [dev]}
   accessModes:
     - ReadWriteOnce
   resources:
@@ -27,6 +32,8 @@ spec:
       storage: 3Gi
 ```
 
+
+L'usage de `selector`  peut permettre de sélectionner plus finement ses PV par des labels posés dessus.
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/StorageClass.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/StorageClass.html)
 
