@@ -52,5 +52,5 @@ Le service va router vers un service externe via son FQDN.
 kubectl expose deployment nginx --port=80 --target-port=8000
 ```
 
-[Menu](https://obeyler.github.io/Formation-K8S/),[Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Ingress.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/StatefulSet.html), [Menu](https://obeyler.github.io/Formation-K8S/),[Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Ingress.html)
 
