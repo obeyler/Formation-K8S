@@ -166,4 +166,4 @@ readinessProbe:
 `kubectl exec mytimer -- rm /tmp/file.txt`
 - Regarder son état
 
-[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)
+[Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PodPlacement.html)
