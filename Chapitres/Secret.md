@@ -50,6 +50,7 @@ ville: "toulouse"
 ```
 - comparer le yaml du secret monsecret avec celui de la configmap maconfigmap 
 - créer le secret suivant :
+
 ```yaml
 apiVersion: v1
 kind: Secret
