@@ -1,5 +1,9 @@
 # Metric Server
+## Commandes utiles
+```shell
+kubectl top node
+```
 
-`kubectl top node`
-
-`kubectl top pod` 
+```shell
+kubectl top pod
+``` 

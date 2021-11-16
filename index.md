@@ -45,6 +45,7 @@
 - [RBAC](Chapitres/RBAC.md)
 - [SecurityContext](Chapitres/SecurityContext.md)
 - [NetworkPolicy](Chapitres/NetworkPolicy.md)
+- [Mise à jour](Chapitres/Maj.md) 
 
 ### Etape 7 - Packaging
 - [Helm](Tools/Helm)
