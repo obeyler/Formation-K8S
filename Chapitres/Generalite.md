@@ -11,7 +11,7 @@ On peut d'ailleurs discuter avec l'APIServer avec des commandes CURL avec les ve
 
 ## Le point de vue Convergence vers la cible.
 Kubernetes peut être également vu comme un système qui va chercher à atteindre/converger vers la cible que vous lui fixerez.
-Lorsque vous lui demandez d'effectuer une action qu'il comprend (ex:lancement d'un pod), s'il ne peut la faire directement, il essayera régulièrement de répondre à votre demande.
+Lorsque vous lui demandez d'effectuer une action qu'il comprend (ex : lancement d'un pod), s'il ne peut la faire directement, il essayera régulièrement de répondre à votre demande.
 
 >Note: Une action qu'il ne comprend pas sera tout simplement rejetée et oubliée. 
 

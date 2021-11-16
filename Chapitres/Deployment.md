@@ -1,7 +1,8 @@
 # Deployment
 ## Role
 Son role est de maintenir opérationnel un nombre pod (replica) en respectant une spécification. 
-Il permet de mettre à jour les images et la scalabilité du nombre d'instance du pod
+Il permet de mettre à jour les images et la scalabilité du nombre d'instance du pod.
+Le deployment s'occupe de la mise à jour et du rollback et délègue l'auto-reparation et le scaling au ReplicaSet. 
 
 ## Structure
 ```yaml
@@ -39,6 +40,26 @@ Si Deployment porte le nom `mondeployment`
 alors ses Replicaset porte le nom `mondeployment-HASHREPLICASET`
 et les pods d'un replicaset porte le nom `mondeployment-HASHREPLICASET-HASHPOD`
 
+## Stratégie de mise à jour
+On peut définir de manière fine la façon dont un déploiement va se mettre à jour. 
+Par défaut, on sera en `RollingUpdate`
+
+### type recreate
+Tous les pods seront tués avant de recréer de nouveau pod.
+
+### type RollingUpdate
+Le RollingUpdate s'appuie sur deux paramètres `maxUnavailable` et `maxSurge`.
+
+`maxUnavailable` : exprimée en valeur absolue ou en pourcentage donne le nombre de pod qui pourront être indisponible
+par default la valeur est de 25%.
+Par exemple, lorsque cette valeur est fixée à 30 %, 
+l'ancien ReplicaSet peut être réduit à 70 % des pods souhaités dès le début de la mise à jour. 
+Une fois que les nouveaux pods sont prêts, l'ancien ReplicaSet peut être réduit davantage, puis le nouveau ReplicaSet peut être mis à l'échelle, de sorte que le nombre total de pods disponibles à tout moment pendant la mise à jour représente au moins 70 % des pods souhaités.
+
+`maxSurge`:  exprimée en valeur absolue ou en pourcentage donne le nombre de pod qui pourront être créé en plus du nombre souhaité.
+par default la valeur est de 25%.
+Par exemple, lorsque cette valeur est définie sur 30%, le nouveau ReplicaSet peut être mis à l'échelle immédiatement au démarrage de la mise à jour continue, de sorte que le nombre total d'anciens et de nouveaux pods ne dépasse pas 130% des pods souhaités. 
+Une fois que les anciens pods ont été détruits, le nouveau ReplicaSet peut être augmenté davantage, garantissant que le nombre total de pods en cours d'exécution à tout moment pendant la mise à jour est au maximum de 130% des pods souhaités.
 
 ## Commandes utiles
 Pour créer rapidement un déploiement via une commande :

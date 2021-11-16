@@ -7,7 +7,7 @@ On peut placer un pod en fonction des labels qui sont posés sur les Nodes. Si u
   nodeSelector:
     disktype: ssd
 ```
-Il est a noté que les Nodes ont de base plusieurs labels présents.
+Il est a noté que les Nodes ont, de base, plusieurs labels présents.
 ```shell
 kubectl get node --show-labels
 
