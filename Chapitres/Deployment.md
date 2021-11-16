@@ -4,6 +4,7 @@ Son role est de maintenir opérationnel un nombre pod (replica) en respectant un
 Il permet de mettre à jour les images et la scalabilité du nombre d'instance du pod.
 Le deployment s'occupe de la mise à jour et du rollback et délègue l'auto-reparation et le scaling au ReplicaSet.
 ![schema](https://obeyler.github.io/Formation-K8S/images/Deploiement.svg)
+
 ## Structure
 ```yaml
 apiVersion: apps/v1
