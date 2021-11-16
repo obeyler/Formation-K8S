@@ -35,5 +35,5 @@ spec:
 
 L'usage de `selector`  peut permettre de sélectionner plus finement ses PV par des labels posés dessus.
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/StorageClass.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PodPlacement.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PersistentVolume.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PodPlacement.html)
 

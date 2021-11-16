@@ -1,15 +1,15 @@
 # Statefulset
 ## Role
 
->Les StatefulSets sont utiles pour des applications qui nécessitent une ou plusieurs des choses suivantes :
-Des identifiants réseau stables et uniques.
-Un stockage persistant stable.
-Un déploiement et une mise à l'échelle ordonnés et contrôlés.
-Des mises à jour continues (rolling update) ordonnées et automatisées.
+Les StatefulSets sont utiles pour des applications qui nécessitent une ou plusieurs des choses suivantes :
+- Des identifiants réseau stables et uniques.
+- Un stockage persistant stable.
+- Un déploiement et une mise à l'échelle ordonnés et contrôlés.
+- Des mises à jour continues (rolling update) ordonnées et automatisées.
 
 > Ci-dessus, stable est synonyme de persistance suite au (re)scheduling de Pods. Si une application ne nécessite aucun identifiant stable ou de déploiement, suppression ou mise à l'échelle stables, vous devriez déployer votre application en utilisant un objet de charge de travail fournissant un ensemble de réplicas sans état (stateless).
 Un Deployment ou ReplicaSet peut être mieux adapté pour vos applications sans état.
-(dixit https://kubernetes.io/fr/docs/concepts/workloads/controllers/statefulset/ )
+(dixit https://kubernetes.io/fr/docs/concepts/workloads/controllers/statefulset/)
 
 ## Structure
 ```yaml
