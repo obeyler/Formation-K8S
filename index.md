@@ -33,8 +33,8 @@
 
 ### Etape 4 - la persistence
 - [Tour d'horizon de la persistance](Chapitres/Persistence.md)
-- [PersistentVolume](Chapitres/PersistentVolume.md)
 - [StorageClass](Chapitres/StorageClass.md)
+- [PersistentVolume](Chapitres/PersistentVolume.md)
 - [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
 - 
 ### Etape 5 - le placement des pods

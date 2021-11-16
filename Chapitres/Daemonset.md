@@ -60,7 +60,7 @@ spec:
 
 
 ## Exercices :
-- instancier le daemonset donné par exemple
+- instancier le daemonset donné dans l'exemple
 - trouver pourquoi les pod ne sont pas `Ready`
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/HorizontalPodAutoScaling.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/StatefulSet.html)
