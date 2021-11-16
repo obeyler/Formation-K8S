@@ -44,13 +44,13 @@ Il arrive que lors d'une suppression de namespace celui-ci reste bloqué en mode
 => 'kubectl delete pod NOMDUPOD -n NAMESPACE --force`
 - une resource custom est présente et n'est pas détruite 
 => trouver la CR et la supprimer
-Seulement en dernier recours supprimer le finalizer du namespace
+- Seulement en dernier recours supprimer le finalizer du namespace
 
 ## Exercice:
 - Création d'un namespace "TEST-NOM-PRENOM"
-- Création d'un deuxieme namespace "NOM-PRENOM"
+- Création d'un deuxième namespace "NOM-PRENOM"
 - Affichage du yaml de votre namespace
 - Lister les namespaces
-- Modifier contexte qui prendrait un namespace par défaut votre namespace "NOM-PRENOM"
+- Modifier votre contexte (cf KubeConfig) pour prendre comme namespace par défaut votre namespace "NOM-PRENOM"
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Commandes.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 
