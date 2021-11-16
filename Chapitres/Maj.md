@@ -81,3 +81,6 @@ La communauté liste toujours les évolutions (nombreuses) des api, mais il n'es
 Des changements liés à des ajouts de sécurités peuvent empêcher le fonctionnement des produits posés sur votre cluster.
 On installe souvent des produits via des helm charts, l'upgrade d'un cluster Kubernetes vous imposera souvent d'upgrader aussi les charts que vous aviez déployés.
 > Il faut toujours consulter le ChangeLog de la version 1.X.0 section `Whats News` pour anticiper les évolutions à prévoir !!
+
+
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Helm.html)
