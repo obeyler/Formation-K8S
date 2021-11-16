@@ -68,3 +68,6 @@ Pour affecter une variable qui servira pour les templates,
 
 ## Commandes utiles
 
+
+
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html)

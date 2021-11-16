@@ -109,4 +109,4 @@ Ici les Pods Redis seront disposés de telle manière qu'ils ne seront jamais 2 
 On peut mettre `podAffinity` et `podAntiAffinity`  
 
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PersistentVolumeClaim.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PersistentVolumeClaim.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Taint.html)
