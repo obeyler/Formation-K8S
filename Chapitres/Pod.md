@@ -1,6 +1,6 @@
 # Pod
 ## Role
-C'est l'unité de base active dans kubernetes, il peut être instancié seul, au sein d'un déploiement ou d'un replicaset ou d'un statefulset ou d'un daemonset.
+C'est l'unité de base active dans kubernetes, il peut être instancié seul, au sein d'un déploiement ou d'un replicaset ou d'un statefulset ou d'un daemonset ou d'un job ou d'un cronjob.
 Il peut même être `static` quand il est directement instancié par le kubelet via un manifest dans /var/lib/kubelet/manifest.
 Hormis le cas ou le pod est static, si vous détruisez un pod il ne reconstruira pas tout seul.
 > On ne peut pas éditer un pod, mais il y a une astuce : on récupère son contenu, on détruit le pod, on modifie le contenu et enfin on le reconstruit :-)
@@ -66,11 +66,15 @@ On peut facilement voir les logs d'execution d'un pod.
 kubectl logs podName
 ```
 - cas un plusieurs containers dans le pod :
-`kubectl logs podName -c containerName`
+```shell
+-kubectl logs podName -c containerName
+```
 
-Si on veut voir les logs d'un pod qui plante et qui redémarre. `kubectl logs podName` donnera les logs du pod redémarré et donc pas la cause du plantage.
+Si on veut voir les logs d'un pod qui plante et qui redémarre. La commande `kubectl logs podName` donne les logs du pod redémarré et donc pas la cause du plantage.
 Pour y remédier, on cherche à voir les logs d'avant son redémarrage, il faut faire :
-`kubectl logs podName -p=true `
+```shell
+kubectl logs podName -p=true 
+```
 
 ## Les probes Startup/Liveness/Readyness
 Le pod offre la possibilité de détecter s'il est opérationnel ou pas par le biais de probe (sonde).
@@ -134,6 +138,9 @@ exemple :
       initialDelaySeconds: 3
       periodSeconds: 3
 ```
+
+> Kubernetes n'est pas magicien, si vos containers n'ont pas de mécanisme permettant de détecter le coté "je suis en vie" et/ou le côté "je suis apte à travailler", il ne fera pas de miracle. 
+> Mettre une sonde mal configurée aura pour effet de refaire démarrer votre pod ou le rendre inutilisable.
 
 ## Exercices :
 - Création d'un pod nommé `test` ayant un container avec comme image `nginx` dans votre namespace "TEST-NOM-PRENOM"
