@@ -38,6 +38,27 @@ Ce qu'il faut retenir c'est que :
 - on peut décomposer ce fichier en n fichiers 
 - peut vous permettre de changer le nom du namespace par défaut 
 
+### Comment définir des users
+Comme on peut s'identifier de différentes manières sur un cluster Kubernetes (par Token, par Certificat, par basicauth), il existera différent moyen de renseigner les crédentials d'un utilisateur.
+> C'est l'administrateur par un paramétrage du cluster qui détermine les moyens d'identifications autorisés ou pas sur le cluster. 
+> En production, il est recommandé d'utiliser seulement 'Token' ou 'Certificat'.
+
+```shell
+kubectl config set-credentials <USER> --client-key=~/.kube/user.key
+
+kubectl config set-credentials <USER> --token=weU9l35qcif
+
+kubectl config set-credentials <USER> --username=admin --password=uXFGweU9l35qcif
+
+kubectl config set-credentials <USER> --client-certificate=~/.kube/admin.crt --embed-certs=true
+```
+
+### Comment définir des clusters
+Pour rajouter un cluster supplémentaire à votre `.kube/config` :
+```shell
+kubectl config  set-cluster <NOM-DU-CLUSTER> --server=https://1.2.3.4 --certificate-authority=fake-ca-file
+```
+
 ## Commandes utiles pour jouer avec un .kube/config
 
 Pour lister les utilisateurs ou les clusters :
@@ -45,6 +66,7 @@ Pour lister les utilisateurs ou les clusters :
 kubectl config get-users
 kubectl config get-clusters
 ```
+
 Pour lister les contexts présents :
 ```shell
 kubectl config get-contexts
