@@ -20,11 +20,11 @@ Il existe des namespaces spécifiques :
 ## Commandes utiles
 Création d'un namespace
 ```
-kubectl create ns monnamespace
+kubectl create ns <mon_namespace>
 ```
 Voir le yaml décrivant votre namespace
 ```
-kubectl get ns monnamespace -o yaml
+kubectl get ns <mon_namespace> -o yaml
 ```
 
 Lister les namespaces
@@ -33,7 +33,7 @@ kubectl get ns
 ```
 Supprimer un namespace
 ```
-kubectl delete ns monnamespace
+kubectl delete ns <mon_namespace>
 ```
 ## Namespace bloqué en mode _Terminating_
 
