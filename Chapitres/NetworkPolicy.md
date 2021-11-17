@@ -1,6 +1,7 @@
 # NetworkPolicy
 ## Role
-Le but d'un `NetworkPolicy` est de définir ce qui peut `entrer` ou `sortir` d'un pod. Les NetworkPolicy ne sont pas forcément supporté par toutes les CNI fonctionnant sur Kubernetes.
+Le but d'un `NetworkPolicy` est de définir ce qui peut `entrer` ou `sortir` d'un pod. 
+> Les NetworkPolicy ne sont pas forcément supportés par tous les CNI fonctionnant sur Kubernetes.
 
 ## Structure
 ```yaml

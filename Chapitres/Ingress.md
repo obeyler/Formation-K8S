@@ -1,13 +1,14 @@
 # Ingress 
 ## Role
 Le but d'un Ingress est de fournir des informations nécessaires à un ingress controller.
-L'ingressController va effectuer un routage vers différents services à l'intérieur du cluster en fonction d'informations présentes dans la requête http/https. 
+L'ingressController est un composant qui va effectuer un routage vers différents services à l'intérieur du cluster en fonction d'informations présentes dans la requête http/https. 
 L'Ingress peut également donner l'indication à l'ingress controller quel certificat il doit presenter.
 ![schema](https://obeyler.github.io/Formation-K8S/images/ingress.svg)
 
 L'ingressController fournira souvent bien plus qu'un routeur simple. Il permet d'exposer en HTTPS, fait du BasicAuth, de l'OIDC, rajoute des informations, etc. 
 > Bien étudier chaque IngressController pour connaitre ses fonctions au dela du simple routage
 
+>L'ingressController s'il n'est pas un composant du control plane ni obligatoire sur un cluster kubernetes, il est quand même (le plus souvent) fournit par votre fournisseur de cluster.
 
 ## Structure d'un Ingress
 ```yaml
@@ -63,10 +64,10 @@ kubectl create ingress simple --rule="foo.com/bar=svc1:8080,tls=my-cert"
 ```
 
 ## FAQ
->Peut on avoir plusieurs IngressController ?
+>Peut-on avoir plusieurs IngressController ?
 
 Tout à fait ! Un même cluster peut héberger plusieurs ingress controller, dans ce cas il convient de préciser via une annotation
-quel Ingress Class utiliser
+quel Ingress Class utiliser. 
 ```yaml
   annotations:
     kubernetes.io/ingress.class: nginx

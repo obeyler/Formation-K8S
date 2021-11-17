@@ -31,7 +31,8 @@ C'est un peu comme changer les fondations d'un immeuble : Il y en a qui ont essa
 
 > Comme dit en introduction, le stockage est un GROS point dur sur Kubernetes.
 Un cluster qui ne fournit pas de stockage n'est pas un cluster sur lequel vous pourrez vous appuyer longtemps.
-Bien choisir son fournisseur de stockage est fondamental et prends beaucoup de temps ! Penser à vous appuyer sur votre fournisseur de cluster pour bien comprendre le fonctionnement/stockage qu'il vous propose.
+Bien choisir son fournisseur de stockage est fondamental et prend beaucoup de temps ! 
+> Penser à vous appuyer sur votre fournisseur de cluster pour bien comprendre le fonctionnement/stockage qu'il vous propose.
 Il faut le sélectionner avec grand soin en fonction de ce qu'il sait faire ou pas et de sa maturité.
 
 

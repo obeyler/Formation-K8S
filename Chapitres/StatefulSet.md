@@ -1,4 +1,4 @@
-# Statefulset
+# StatefulSet
 ## Role
 
 Les StatefulSets sont utiles pour des applications qui nécessitent une ou plusieurs des choses suivantes :
@@ -52,10 +52,10 @@ spec:
 ## Nommage
 Le nom des pods n'est pas choisi au hasard et on peut facilement relier les uns aux autres grâce à leur nom.
 Si StatefulSet porte le nom `monstateful`
-alors ses pod porte le nom `monstateful-indice` avec indice = 0, 1, 2, 3 ...
+alors ses pod portent le nom `monstateful-indice` avec indice qui vaut : 0, 1, 2, 3 ...
 
 ## Attention
-- Les PVC d'un statefulset ne sont pas supprimés automatiquement lors de la suppression d'un statefulset !
+- Les PVC d'un statefulSet ne sont pas supprimés automatiquement lors de la suppression d'un statefulset !
 - Les Pods sont créés séquentiellement xx-0 puis xx-1 puis xx-2 ....et détruit dans l'ordre inverse : xx-2, xx-1, xx-0
 - Les Pods ne sont pas garanti d'être supprimés lors de la suppression d'un statefulset
 - Contrairement à un Deploiement chaque pod aura ses propres PVC et donc ses propres PV !

@@ -1,8 +1,8 @@
 # HorizontalPodAutoscaling
 Le principe de l'autoscaling horizontal de pod et d'adapter le nombre d'instance d'un pod en fonction de paramètre tel que la charge CPU ou la charge memoire des pods.
 
-> Pour fonctionner un Horizontal Pod Autoscaler aura besoin qu'un fournisseur de metric (le plus souvent un metric server) soit opérationnel sur le cluster. 
-> On peut facilement tester sa presence par l'usage d'un `kubectl top pod` ou un `kubectl top node` qui afficherons respectivement la consomation cpu et mémoire des pods ou des nodes.
+> Pour fonctionner un Horizontal Pod Autoscaler aura besoin qu'un fournisseur de métrique (le plus souvent un metric server) soit opérationnel sur le cluster. 
+> On peut facilement tester sa présence par l'usage d'un `kubectl top pod` ou un `kubectl top node` qui afficherons respectivement la consommation cpu et mémoire des pods ou des nodes.
 
 > Une mauvaise configuration du metric serveur aura aussi comme effet délétère de bloquer la destruction des namespaces en mode `Terminating` (comme tout autre apiservice défaillant d'ailleurs).
 
@@ -29,7 +29,7 @@ spec:
 ```
 
 ## Commandes utiles
-```
+```shell
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10 
 ```
 
