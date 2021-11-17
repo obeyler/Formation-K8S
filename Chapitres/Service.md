@@ -20,7 +20,8 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9376
+      targetPort: 8080
+      
 ```
 
 ## le DNS
