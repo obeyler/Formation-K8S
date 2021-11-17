@@ -108,8 +108,32 @@ Pour updater ou installer un Chart :
 ```shell
 helm upgrade --install <NOM-DE-L-INSTANCE> <NOM-DU-CHART.tgz ou NOM-DU-REPO/NOM-DU-CHART> 
 ```
+
+### Attention / conseils 
+- conseil 0 :
+Éviter le passage par paramètres `--set param=xx` si vous pouvez passer par un fichier `values.yaml`
+Lors d'un update vous allez avoir tendance à oublier de remettre les `--set..`
+
+- conseil 1 : 
+Il n'y a pas de norme pour les Charts ! Plusieurs charts existent souvent pour le même produit. 
+Le fichier `values.yaml` sera propre à chaque version chart ! 
+Le chart d'Harbor fait par Bitnami© n'est pas le même que le chart d'Harbor fait par VmWare© ! 
+Ils ne sont pas interchangeables !
+
+- conseil 2 :
+Les fichiers `values.yaml` peuvent être très long et très dense (cf https://github.com/concourse/concourse-chart/blob/master/values.yaml + de 3000 lignes !). 
+Aussi mieux vaut ne pas les copier, mais juste surcharger les parties que vous voulez modifier.
+
+- conseil 3 :
+Ne pas suivre systématiquement les upgrades des versions de vos helm chart, se contenter de ceux qui vont corriger un bug qui vous concerne ou qui change la version des images dockers (donc du produit).
+En effet, on peut avoir des fréquences de release de helm chart 2 à 3 fois... par jour pour certain !
+
+- conseil 4 : un peu contradictoire avec le 3 :-), 
+Si le value.yaml d'un chart évolue beaucoup faite l'effort d'upgrader votre chart. Sinon, quand vous serez obligé par une montée de version de Kubernetes de mettre à jour votre Helm chart... vous allez souffrir !
+
+
 ## Exercices
 
 - créer un chart nommée TOTO en version 1.0 et déployer le
  
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html)
