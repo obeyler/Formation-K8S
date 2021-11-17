@@ -20,7 +20,7 @@
 - [ConfigMap](Chapitres/ConfigMap.md) 
 - [Secret](Chapitres/Secret.md)
 
-### Etape 2 - les autres moyens d'avoir des pods
+### Etape 2 - les autres moyens d'instancier des pods
 - [Tour d'horizon](Chapitres/Workload.md)
 - [Deployment](Chapitres/Deployment.md)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
