@@ -32,6 +32,8 @@ Ici, ce sera tous les pods qui portent le label "app: MyApp".
 Au sein d'un cluster Kubernetes les services sont joignables en
 - nomduservice # au sein du meme namespace
 - nomduservice.nomDeSonNamespace.svc # depuis n'importe quel namespace 
+- nomduservice.nomDeSonNamespace.svc.cluster.local # depuis n'importe quel namespace
+
 Le DNS est le plus souvent fournit par le composant CoreDNS.
 
 
