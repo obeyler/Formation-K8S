@@ -77,14 +77,14 @@ quel Ingress Class utiliser
 
 Il en existe beaucoup !
 - nginx (https://github.com/nginxinc/kubernetes-ingress),
-- traefik (https://github.com/Kong/kubernetes-ingress-controller), 
+- traefik (https://doc.traefik.io/traefik/providers/kubernetes-ingress/), 
 - istio (https://istio.io/latest/docs/tasks/traffic-management/ingress/kubernetes-ingress/),
 - ambassador (https://github.com/datawire/ambassador)
 - HaProxy (https://github.com/jcmoraisjr/haproxy-ingress)
 - contour (https://github.com/heptio/contour)
 - kong (https://github.com/Kong/kubernetes-ingress-controller)
 
-Attention les annotations qui pilotent souvent les comportements des IngressController sont là plus part du temps propre à chaque fournisseur et même au sein d'un même fournisseur, d'une version n à une version n+1 les annotations peuvent changer radicalement !
+Attention, les annotations qui pilotent souvent les comportements des IngressController sont là plus part du temps propre à chaque fournisseur, et même au sein d'un même fournisseur, d'une version n à une version n+1 les annotations peuvent changer radicalement !
 
 > Conseil bien choisir son ingress controller pour l'explorer est en connaitre ses subtilités et limites.
 Certains permettrons de faire du TCP UDP en plus de l'HTTP/HTTPS. 
