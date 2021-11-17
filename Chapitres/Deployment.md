@@ -1,8 +1,8 @@
 # Deployment
-## Role
-Son role est de maintenir opérationnel un nombre pod (replica) en respectant une spécification. 
-Il permet de mettre à jour les images et la scalabilité du nombre d'instance du pod.
-Le deployment s'occupe de la mise à jour et du rollback et délègue l'auto-reparation et le scaling au ReplicaSet.
+## Rôle 
+Son rôle est de maintenir opérationnel un nombre de pods (replica) en respectant une spécification. 
+Il permet de mettre à jour les images et la scalabilité du nombre d'instances du pod.
+Le deployment s'occupe de la mise à jour et du rollback et délègue l'auto-réparation et le scaling au ReplicaSet.
 
 ![schema](https://obeyler.github.io/Formation-K8S/images/Deployment.svg)
 
@@ -39,8 +39,8 @@ Le déploiement va créer un replicaset qui portera les pods. À chaque changeme
 ## Nommage
 Le nom des pods et des replicaset n'est pas choisi au hasard et on peut facilement relier les uns aux autres grâce à leur nom.
 Si Deployment porte le nom `mondeployment`
-alors ses Replicaset porte le nom `mondeployment-HASHREPLICASET`
-et les pods d'un replicaset porte le nom `mondeployment-HASHREPLICASET-HASHPOD`
+alors ses Replicaset portent le nom `mondeployment-HASHREPLICASET`
+et les pods d'un replicaset portent le nom `mondeployment-HASHREPLICASET-HASHPOD`
 
 ## Stratégie de mise à jour
 On peut définir de manière fine la façon dont un déploiement va se mettre à jour. 
@@ -52,13 +52,13 @@ Tous les pods seront tués avant de recréer de nouveau pod.
 ### type RollingUpdate
 Le RollingUpdate s'appuie sur deux paramètres `maxUnavailable` et `maxSurge`.
 
-`maxUnavailable` : exprimée en valeur absolue ou en pourcentage donne le nombre de pod qui pourront être indisponible
+`maxUnavailable` : exprimée en valeur absolue ou en pourcentage, donne le nombre de pods qui pourront être indisponibles
 par default la valeur est de 25%.
 Par exemple, lorsque cette valeur est fixée à 30 %, 
 l'ancien ReplicaSet peut être réduit à 70 % des pods souhaités dès le début de la mise à jour. 
 Une fois que les nouveaux pods sont prêts, l'ancien ReplicaSet peut être réduit davantage, puis le nouveau ReplicaSet peut être mis à l'échelle, de sorte que le nombre total de pods disponibles à tout moment pendant la mise à jour représente au moins 70 % des pods souhaités.
 
-`maxSurge`:  exprimée en valeur absolue ou en pourcentage donne le nombre de pod qui pourront être créé en plus du nombre souhaité.
+`maxSurge`:  exprimée en valeur absolue ou en pourcentage, donne le nombre de pods qui pourront être créés en plus du nombre souhaité.
 par default la valeur est de 25%.
 Par exemple, lorsque cette valeur est définie sur 30%, le nouveau ReplicaSet peut être mis à l'échelle immédiatement au démarrage de la mise à jour continue, de sorte que le nombre total d'anciens et de nouveaux pods ne dépasse pas 130% des pods souhaités. 
 Une fois que les anciens pods ont été détruits, le nouveau ReplicaSet peut être augmenté davantage, garantissant que le nombre total de pods en cours d'exécution à tout moment pendant la mise à jour est au maximum de 130% des pods souhaités.
@@ -100,7 +100,7 @@ kubectl rollout undo deployment/nginx-deployment --to-revision=2
 - Upgrader via `kubectl edit ...` le nombre de replica à 2
 - Changer l'image pour l'image `nginx:stable-alpine` sans passer par `edit` mais par `set image`
 - Consulter la description du déploiement
-- Consulter l'historique des revisions et faire un rollout vers la premiere revision.
+- Consulter l'historique des révisions et faire un rollout vers la première revision.
   (noter l'influence de l'option `--record` en faisant les actions avec ou sans cette option)
 
 

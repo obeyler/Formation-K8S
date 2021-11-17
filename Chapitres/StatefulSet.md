@@ -7,8 +7,8 @@ Les StatefulSets sont utiles pour des applications qui nécessitent une ou plusi
 - Un déploiement et une mise à l'échelle ordonnés et contrôlés.
 - Des mises à jour continues (rolling update) ordonnées et automatisées.
 
-> Ci-dessus, stable est synonyme de persistance suite au (re)scheduling de Pods. Si une application ne nécessite aucun identifiant stable ou de déploiement, suppression ou mise à l'échelle stables, vous devriez déployer votre application en utilisant un objet de charge de travail fournissant un ensemble de réplicas sans état (stateless).
-Un Deployment ou ReplicaSet peut être mieux adapté pour vos applications sans état.
+> Ci-dessus, stable est synonyme de persistance suite au (re)scheduling de Pods. Si une application ne nécessite aucun identifiants stables ou de déploiement, suppression ou mise à l'échelle stables, vous devriez déployer votre application en utilisant un objet de charge de travail fournissant un ensemble de réplicas sans état (stateless).
+Un Deployment ou ReplicaSet peut être mieux adapté pour vos applications sans états.
 (dixit https://kubernetes.io/fr/docs/concepts/workloads/controllers/statefulset/)
 
 ## Structure
@@ -57,7 +57,7 @@ alors ses pod porte le nom `monstateful-indice` avec indice = 0, 1, 2, 3 ...
 ## Attention
 - Les PVC d'un statefulset ne sont pas supprimés automatiquement lors de la suppression d'un statefulset !
 - Les Pods sont créés séquentiellement xx-0 puis xx-1 puis xx-2 ....et détruit dans l'ordre inverse : xx-2, xx-1, xx-0
-- Les Pods ne sont pas garanti d'être supprimés lors de la suppression d'un statefulset
-- Contrairement à un Deploiement chaque pod aura ses propres PVC et donc ses propres PV !
+- Les Pods ne sont pas garantis d'être supprimés lors de la suppression d'un statefulset
+- Contrairement à un déploiement chaque pod aura ses propres PVC et donc ses propres PV !
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Daemonset.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Service.html)
