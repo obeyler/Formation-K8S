@@ -68,7 +68,11 @@ helm repo update
 ```
 > à noter rien ne vous empêche de donner le nom que vous souhaitez à un repo.
 
+Il existe des outils tels que KubeApps qui permet d'avoir une bibliothèque de Helm Chart
 
+![kubeapps](../images/kubeapps.jpg)
+
+et meme un moteur de recherche pour trouver les charts : [https://hub.helm.sh/charts](https://hub.helm.sh/charts)
 ## A savoir sur l'usage
 
 Pour affecter une variable qui servira pour les templates, 
@@ -127,9 +131,14 @@ Aussi mieux vaut ne pas les copier, mais juste surcharger les parties que vous v
 - conseil 3 :
 Ne pas suivre systématiquement les upgrades des versions de vos helm chart, se contenter de ceux qui vont corriger un bug qui vous concerne ou qui change la version des images dockers (donc du produit).
 En effet, on peut avoir des fréquences de release de helm chart 2 à 3 fois... par jour pour certain !
+exemple: 
+![fluentd](../images/fluend.jpg)
 
 - conseil 4 : un peu contradictoire avec le 3 :-), 
 Si le value.yaml d'un chart évolue beaucoup faite l'effort d'upgrader votre chart. Sinon, quand vous serez obligé par une montée de version de Kubernetes de mettre à jour votre Helm chart... vous allez souffrir !
+
+- conseil 5 : ne pas croire que l'on peut porter un chart d'un cluster à l'autre sans effort. 
+Chaque cluster kubernetes est souvent spécifique (Stockage/CNI/CRI), l'adaptation peut être importante. 
 
 
 ## Exercices
