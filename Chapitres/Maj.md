@@ -1,5 +1,6 @@
 # Mise à jour d'un cluster Kubernetes
-Quand on rentre dans le monde Kubernetes il est fondamental de prendre en compte cet aspect dans votre organisation. 
+Quand on rentre dans le monde Kubernetes, il est fondamental de prendre en compte cet aspect dans votre organisation. 
+Les évolutions touchent différents aspects aussi bien objets que cli kubectl. 
 Il est impensable en effet de ne pas provisionner du temps pour cela sur votre projet.
 
 ## Politique d'upgrade
@@ -82,7 +83,7 @@ Des changements liés à des ajouts de sécurités peuvent empêcher le fonction
 On installe souvent des produits via des helm charts, l'upgrade d'un cluster Kubernetes vous imposera souvent d'upgrader aussi les charts que vous aviez déployés.
 > Il faut toujours consulter le ChangeLog de la version 1.X.0 section `Whats News` pour anticiper les évolutions à prévoir !!
 
-Exemple d'évolution :
+#### Exemple d'évolution :
 ```yaml
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
@@ -144,6 +145,17 @@ spec:
 ```
 
 Lors d'un changement de fournisseur de Kubernetes, il n'est pas rare de devoir revoir ses fichiers yaml car chaque fournisseur va avoir sa politique de sécurité.
+
+#### Attention aux changements même dans l'usage de la kubectl 
+
+**Jusqu’à la version 1.17**
+
+kubectl run toto –i busybox  => Crée et lance un deployment !
+(mais aussi un pod / job /cron job cela dépendra des options “restart” et “schedule” )
+
+**Après la version 1.17**
+
+Kubectl run toto –i busybox  => Crée et lance un pod !
 
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Helm.html)
