@@ -55,8 +55,8 @@
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
 - [Lab 2](Exercices/Lab-002.md) (resource probe)
-- [Lab 3](Exercices/Lab-003.md) ()
-- [Lab 3](Exercices/Lab-004.md) (RBAC)
+- [Lab 3](Exercices/Lab-003.md) (Placement)
+- [Lab 3](Exercices/Lab-005.md) (RBAC)
 
 ## Ecosysteme & outils
 
