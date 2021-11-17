@@ -15,6 +15,15 @@ NAME       STATUS   ROLES    AGE    VERSION   LABELS
 minikube   Ready    <none>   330d   v1.22.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=minikube,kubernetes.io/os=linux
 ```
 
+#### Attention
+
+> Openstack : The OpenStack cloud provider uses the instance name (as determined from OpenStack metadata) as the name of the Kubernetes Node object
+> (Source :https://v1-18.docs.kubernetes.io/docs/concepts/cluster-administration/cloud-providers/)
+> Conseil: Ne faîte pas de node sélector sur le nom du node !
+Si vous tuez votre VM le iaas vous en donnera une autre mais qui n’a pas le même ID !
+=> Donc pas le même Node name
+
+
 ### Les resources
 Les resources demandées par le pod vont être utiles au scheduler pour savoir où placer le pod mais pas seulement.
 - Si pour un Pod les resources sont non définies (ni request ni limit), il pod est considéré comme non prioritaire.
