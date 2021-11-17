@@ -82,6 +82,67 @@ Des changements liés à des ajouts de sécurités peuvent empêcher le fonction
 On installe souvent des produits via des helm charts, l'upgrade d'un cluster Kubernetes vous imposera souvent d'upgrader aussi les charts que vous aviez déployés.
 > Il faut toujours consulter le ChangeLog de la version 1.X.0 section `Whats News` pour anticiper les évolutions à prévoir !!
 
+Exemple d'évolution :
+```yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+   nginx.ingress.kubernetes.io/auth-type: basic
+   nginx.ingress.kubernetes.io/auth-secret: basic-auth
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: http-svc
+          servicePort: 80
+```
+
+```yaml
+apiVersion: extensions/v1beta1  # <========= !!!
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+    ingress.kubernetes.io/auth-type: basic      # <========= !!!
+    ingress.kubernetes.io/auth-secret: mypasswd # <========= !!!
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginxservice
+          servicePort: 80
+```
+
+
+```yaml
+apiVersion: networking.k8s.io/v1  # <========= !!!
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+    ingress.kubernetes.io/auth-type: basic      
+    ingress.kubernetes.io/auth-secret: mypasswd 
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          service:             # <========= !!!
+            name: nginxservice # <========= !!!
+            port:              # <========= !!!
+              number: 80       # <========= !!!
+```
+
 Lors d'un changement de fournisseur de Kubernetes, il n'est pas rare de devoir revoir ses fichiers yaml car chaque fournisseur va avoir sa politique de sécurité.
 
 

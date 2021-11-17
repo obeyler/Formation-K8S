@@ -90,5 +90,31 @@ Attention les annotations qui pilotent souvent les comportements des IngressCont
 > Conseil bien choisir son ingress controller pour l'explorer est en connaitre ses subtilités et limites.
 Certains permettrons de faire du TCP UDP en plus de l'HTTP/HTTPS. 
 
+## Attention à certains IngressController 
+Certains ingress controller utilisent d'autres moyens de se configurer en plus des ingress :
+
+Traefik V2:
+```yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: my-auth
+spec:
+  basicAuth:
+    # ...
+    headerField: X-WebAuth-User
+```
+
+```yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroute
+spec:
+# more fields...
+  routes:
+    middlewares:
+      - name: my-auth
+```
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Service.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Persistence.html)
 
