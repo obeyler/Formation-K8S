@@ -75,7 +75,7 @@ kubelet v1.19.15
 Les versions 1.18 ne bénéficieront pas de correctifs pour cette CVE.
 
 ## Difficultés à anticiper
-Sur une version 1.X.Y, les patchs ne posent pas de problèmes et n'apportent que des correctifs (bug/CVE).
+Sur une version 1.X.Y, les patchs ne posent pas de problèmes et n'apportent que des correctifs (bug/fix de CVE).
 Le changement version X apportera son lot de nouveauté et de changement : changement de politique sécurité, dépréciation de certaines API...
 La communauté liste toujours les évolutions (nombreuses) des api, mais il n'est pas rare que les produits que l'on installe sur un Kubernetes n'anticipent pas ses changements.
 Des changements liés à des ajouts de sécurités peuvent empêcher le fonctionnement des produits posés sur votre cluster.
