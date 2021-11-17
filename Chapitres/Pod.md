@@ -37,7 +37,7 @@ spec:
 
 ## Init-container
 On peut mettre un ou plusieurs containers pour effectuer des tâches en pré-lancement du/des containers principaux.
-Cela peut être utile par exemple pour copier ou mettre des droits sur des fichiers mais aussi pour faire attendre un autre composant.
+Cela peut être utile par exemple pour copier ou mettre des droits sur des fichiers, mais aussi pour faire attendre un autre composant.
 ```yaml
 apiVersion: v1
 kind: Pod
