@@ -82,5 +82,7 @@ Des changements liés à des ajouts de sécurités peuvent empêcher le fonction
 On installe souvent des produits via des helm charts, l'upgrade d'un cluster Kubernetes vous imposera souvent d'upgrader aussi les charts que vous aviez déployés.
 > Il faut toujours consulter le ChangeLog de la version 1.X.0 section `Whats News` pour anticiper les évolutions à prévoir !!
 
+Lors d'un changement de fournisseur de Kubernetes, il n'est pas rare de devoir revoir ses fichiers yaml car chaque fournisseur va avoir sa politique de sécurité.
+
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Helm.html)
