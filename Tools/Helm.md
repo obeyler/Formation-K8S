@@ -76,8 +76,40 @@ Pour affecter une variable qui servira pour les templates,
 - puis le(s) fichiers `values.yaml` fournit en ligne 
 - puis enfin les valeurs présentent dans le fichier `values.yaml` du chart.
 
+## Comprendre les différentes parties du chart
+Il est très souvent utile pour comprendre comment fonctionne un chart, d'aller regarder son code.
+Parmi les fichiers importants à regarder :
+
+- Le fichier `value.yaml` va vous donner les valeurs par défauts qui seront utilisées lors du templating.
+Il vous donnera aussi des informations via des commentaires sur des valeurs de paramètres possibles.
+
+- Le fichier `Chart.yaml` va vous donner les dépendances à d'autres charts ainsi que des informations.
+
+- Le fichier `templates/_helpers.tpl` va vous donner des macro-définitions que l'on pourra exploiter.
+
+- Les fichiers `templates/*.yaml` les templates d'objects que vous voulez instancier.
+
+- Le fichier `README.md` (attention à la caste) sera utilisé par les outils qui présentent les charts sous forme de bibliothèques.
+
+- Le fichier `NOTES.txt` donne des informations aux utilisateurs post-install du chart.
+
 ## Commandes utiles
+Pour créer un helm chart :
+```shell
+helm create <NOM-DU-CHART>
+````
+Pour compiler un helm chart :
+```shell
+cd  <NOM-DU-CHART>
+helm package .  -d <LIEU-OU-SERA-POSE-LE-TGZ>
+````
 
+Pour updater ou installer un Chart :
+```shell
+helm upgrade --install <NOM-DE-L-INSTANCE> <NOM-DU-CHART.tgz ou NOM-DU-REPO/NOM-DU-CHART> 
+```
+## Exercices
 
-
+- créer un chart nommée TOTO en version 1.0 et déployer le
+ 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html)
