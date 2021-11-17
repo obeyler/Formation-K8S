@@ -3,7 +3,7 @@
 C'est l'unité de base active dans kubernetes, il peut être instancié seul, au sein d'un déploiement ou d'un replicaset ou d'un statefulset ou d'un daemonset ou d'un job ou d'un cronjob.
 Il peut même être `static` quand il est directement instancié par le kubelet via un manifest dans /var/lib/kubelet/manifest.
 Hormis le cas ou le pod est static, si vous détruisez un pod il ne reconstruira pas tout seul.
-> On ne peut pas éditer un pod, mais il y a une astuce : on récupère son contenu, on détruit le pod, on modifie le contenu et enfin on le reconstruit :-)
+> On ne peut pas éditer un pod, mais il y a une astuce : on récupère son contenu, on détruit le pod, on modifie le contenu et enfin, on le reconstruit :-)
 
 ## Structure
 minimale:

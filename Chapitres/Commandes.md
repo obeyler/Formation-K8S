@@ -5,34 +5,34 @@ Voici les commandes de base que l'on peut avoir via `kubectl` (liste non exhaust
 Pour récupérer la liste des objets d'un certain type qui n'appartiennent pas spécifiquement à un namespace ou au namespace `default`:
 
 ```shell
-kubectl get `TypeDObjet` 
+kubectl get <TypeDObjet> 
 ```
 
 Pour récupérer la liste des objets d'un certain type qui appartiennent à un namespace :
 ```shell
-kubectl get `TypeDObjet` -n `monnamespace`
+kubectl get <TypeDObjet> -n <mon_namespace>
 ```
 
 Pour récupérer la liste des objets d'un certain type quelque soit leur namespace :
 ```shell
-kubectl get `TypeDObjet` --A
+kubectl get <TypeDObjet> --A
 ou 
-kubectl get `TypeDObjet` --all-namespaces
+kubectl get <TypeDObjet> --all-namespaces
 ```
 
 Pour récupérer un objet d'un certain type qui appartiennent à un namespace :
 ```shell
-kubectl get `TypeDObjet` -n `monnamespace` object
+kubectl get <TypeDObjet> -n <mon_namespace> object
 ```
 
 Pour créer un objet à partir d'un fichier (json ou yaml) :
 ```shell
-kubectl apply -f  `MonFichier.yaml`
+kubectl apply -f  <MonFichier.yaml>
 ```
 
 Pour créer un objet à partir d'un fichier (json ou yaml)  dans un namespace spécifique :
 ```shell
-kubectl apply -f  `MonFichier.yaml`  -n `monnamespace` 
+kubectl apply -f  <MonFichier.yaml>  -n <mon_namespace> 
 ```
 
 Quand on remplace le `-f` par `-k`  dans une commande apply on signale à kubectl d'utiliser son plugin `kustomize`,
@@ -40,22 +40,22 @@ on verra plus tard son usage plus en détail.
 
 Exemple :
 ```shell
-kubectl apply -k  `MonFichier.yaml`  -n `monnamespace` 
+kubectl apply -k  <MonFichier.yaml>  -n <mon_namespace> 
 ```
 
 Pour récupérer le yaml d'un objet :
 ```shell
-kubectl get `TypeDObjet` -n `monnamespace` object -o yaml
+kubectl get <TypeDObjet> -n <mon_namespace> object -o yaml
 ```
 Pour éditer le yaml d'un objet :
 ```shell
-kubectl edit `TypeDObjet` -n `monnamespace` object -o yaml
+kubectl edit <TypeDObjet> -n <mon_namespace> object -o yaml
 ```
 
 Pour détruire un objet d'un certain type qui appartiennent à un namespace :
 
 ```shell
-kubectl delete `TypeDObjet` -n `monnamespace` object
+kubectl delete <TypeDObjet> -n <mon_namespace> object
 ```
 On peut lister les types d'objets supportés par un cluster :
 ```
