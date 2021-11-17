@@ -24,6 +24,10 @@ spec:
       
 ```
 
+Le `selector` va permettre de faire le lien avec les pods. 
+Tous les pods (du même namespace que le service) et qui porteront les labels présents dans `selector` seront éligibles à être joignables par le service.  
+Ici, ce sera tous les pods qui portent le label "app: MyApp".
+
 ## le DNS
 Au sein d'un cluster Kubernetes les services sont joignables en
 - nomduservice # au sein du meme namespace

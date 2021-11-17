@@ -13,7 +13,7 @@ Un chart peut lui-même s'appuyer sur d'autres chart (dépendance).
 Un repository de Helm chart n'est en somme qu'un banal serveur web qui possède un fichier index.yaml.
 Dans ce fichier, on retrouvera la liste des produits avec leur méta-donnée (numéro de version,auteurs,... et lieu où l'on peut télécharger le chart)
 
-Exemple :
+Exemple de contenu :
 
 ```yaml
 apiVersion: v1
@@ -59,7 +59,17 @@ entries:
     - https://charts.bitnami.com/bitnami/airflow-11.1.7.tgz
     version: 11.1.7
 ```
-## A savoir
+
+Pour utiliser un repo helm, il faut l'ajouter en lui donnant un nom :
+
+```shell
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+```
+> à noter rien ne vous empêche de donner le nom que vous souhaitez à un repo.
+
+
+## A savoir sur l'usage
 
 Pour affecter une variable qui servira pour les templates, 
 - les `-set key=valeur` sont prioritaires, 
