@@ -5,6 +5,7 @@ Il est impensable en effet de ne pas provisionner du temps pour cela sur votre p
 
 ## Politique d'upgrade
 > Attention on ne doit upgrader que d'une version 1.X.n vers 1.X.m (patch) ou 1.X.n vers 1.X+1.m
+Il ne faut pas trop attendre sous peine de devoir en faire série.
 
 exemple:  
 - 1.19.7 => 1.19.16 Ok 
@@ -12,6 +13,8 @@ exemple:
 - 1.19.7 => 1.21.0 **KO** !
 
 ## Fréquence
+Mais pourquoi upgrader ?
+
 La communauté Kubernetes sort régulièrement des releases majeurs ou/et mineurs. Elle ne maintient que les 3 dernières branches de release (actuellement 1.22/1.21/1.20).
 voir [https://kubernetes.io/releases/](https://kubernetes.io/releases/)
 
@@ -51,7 +54,7 @@ Version de Kubernetes	Version en amont	Amazon EKS Fin du support
 Pour Rancher/RKE, il faut consulter le site https://www.suse.com/lifecycle/ 
 
 ## CVE
-Chaque patch amène son lot de correction de bug mais aussi quelques fois des correctifs de CVE.
+Chaque patch amène son lot de correction de bug, mais aussi quelques fois des correctifs de CVE.
 Avoir un cluster en dehors des 3/4 dernières versions vous laisse à la merci des CVE qui ne seront pas corrigées.
 
 ### Exemple :
