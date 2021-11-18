@@ -19,6 +19,19 @@ data:
   username: YWRtaW4=
   password: MWYyZDFlMmU2N2Rm  
 ```
+
+On peut s'affranchir d'encoder les données nous même. Dans ce cas on troquera `data` pour `stringData` et Kubernetes l'encodera en base64 pour vous.
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret-sa-sample
+type: Opaque
+stringData:
+  username: admin
+  password: 1f2d1e2e67df  
+```
+
 ## Les différents types possibles
 - Opaque (on y mettra ce qu'on veut) 
 - kubernetes.io/tls (fournit des fichiers type `tls.cert`, `tls.key`, `ca.cert`)
@@ -34,8 +47,9 @@ kubectl get secret secret-sa-sample -o jsonpath="{.data.username}"|base64 --deco
 ```
 
 ## Exercices
-- créer un secret nommée "monsecret" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant
-  monapplication.properties
+- créer un secret nommée "monsecret" à partir avec une propriété "couleur=rouge" ainsi que des fichiers suivant 
+
+monapplication.properties
 ```properties
 test = "345"
 ville = "toulouse"

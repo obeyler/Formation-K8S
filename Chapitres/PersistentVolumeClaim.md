@@ -34,6 +34,12 @@ spec:
 
 
 L'usage de `selector`  peut permettre de sélectionner plus finement ses PV par des labels posés dessus.
-
+```yaml
+  selector:
+    matchLabels:
+      release: "stable"
+    matchExpressions:
+      - {key: environment, operator: In, values: [dev]}
+```
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PersistentVolume.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PodPlacement.html)
 

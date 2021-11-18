@@ -1,9 +1,11 @@
 # Mise à jour d'un cluster Kubernetes
-Quand on rentre dans le monde Kubernetes il est fondamental de prendre en compte cet aspect dans votre organisation. 
+Quand on rentre dans le monde Kubernetes, il est fondamental de prendre en compte cet aspect dans votre organisation. 
+Les évolutions touchent différents aspects aussi bien objets que cli kubectl. 
 Il est impensable en effet de ne pas provisionner du temps pour cela sur votre projet.
 
 ## Politique d'upgrade
 > Attention on ne doit upgrader que d'une version 1.X.n vers 1.X.m (patch) ou 1.X.n vers 1.X+1.m
+Il ne faut pas trop attendre sous peine de devoir en faire série.
 
 exemple:  
 - 1.19.7 => 1.19.16 Ok 
@@ -11,6 +13,8 @@ exemple:
 - 1.19.7 => 1.21.0 **KO** !
 
 ## Fréquence
+Mais pourquoi upgrader ?
+
 La communauté Kubernetes sort régulièrement des releases majeurs ou/et mineurs. Elle ne maintient que les 3 dernières branches de release (actuellement 1.22/1.21/1.20).
 voir [https://kubernetes.io/releases/](https://kubernetes.io/releases/)
 
@@ -50,7 +54,7 @@ Version de Kubernetes	Version en amont	Amazon EKS Fin du support
 Pour Rancher/RKE, il faut consulter le site https://www.suse.com/lifecycle/ 
 
 ## CVE
-Chaque patch amène son lot de correction de bug mais aussi quelques fois des correctifs de CVE.
+Chaque patch amène son lot de correction de bug, mais aussi quelques fois des correctifs de CVE.
 Avoir un cluster en dehors des 3/4 dernières versions vous laisse à la merci des CVE qui ne seront pas corrigées.
 
 ### Exemple :
@@ -75,12 +79,86 @@ kubelet v1.19.15
 Les versions 1.18 ne bénéficieront pas de correctifs pour cette CVE.
 
 ## Difficultés à anticiper
-Sur une version 1.X.Y, les patchs ne posent pas de problèmes et n'apportent que des correctifs (bug/CVE).
+Sur une version 1.X.Y, les patchs ne posent pas de problèmes et n'apportent que des correctifs (bug/fix de CVE).
 Le changement version X apportera son lot de nouveauté et de changement : changement de politique sécurité, dépréciation de certaines API...
 La communauté liste toujours les évolutions (nombreuses) des api, mais il n'est pas rare que les produits que l'on installe sur un Kubernetes n'anticipent pas ses changements.
 Des changements liés à des ajouts de sécurités peuvent empêcher le fonctionnement des produits posés sur votre cluster.
 On installe souvent des produits via des helm charts, l'upgrade d'un cluster Kubernetes vous imposera souvent d'upgrader aussi les charts que vous aviez déployés.
 > Il faut toujours consulter le ChangeLog de la version 1.X.0 section `Whats News` pour anticiper les évolutions à prévoir !!
+
+#### Exemple d'évolution :
+```yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+   nginx.ingress.kubernetes.io/auth-type: basic
+   nginx.ingress.kubernetes.io/auth-secret: basic-auth
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: http-svc
+          servicePort: 80
+```
+
+```yaml
+apiVersion: extensions/v1beta1  # <========= !!!
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+    ingress.kubernetes.io/auth-type: basic      # <========= !!!
+    ingress.kubernetes.io/auth-secret: mypasswd # <========= !!!
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginxservice
+          servicePort: 80
+```
+
+
+```yaml
+apiVersion: networking.k8s.io/v1  # <========= !!!
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+    ingress.kubernetes.io/auth-type: basic      
+    ingress.kubernetes.io/auth-secret: mypasswd 
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          service:             # <========= !!!
+            name: nginxservice # <========= !!!
+            port:              # <========= !!!
+              number: 80       # <========= !!!
+```
+
+Lors d'un changement de fournisseur de Kubernetes, il n'est pas rare de devoir revoir ses fichiers yaml car chaque fournisseur va avoir sa politique de sécurité.
+
+#### Attention aux changements même dans l'usage de la kubectl 
+
+**Jusqu’à la version 1.17**
+
+kubectl run toto –i busybox  => Crée et lance un deployment !
+(mais aussi un pod / job /cron job cela dépendra des options “restart” et “schedule” )
+
+**Après la version 1.17**
+
+Kubectl run toto –i busybox  => Crée et lance un pod !
 
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Helm.html)
