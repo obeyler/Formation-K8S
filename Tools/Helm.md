@@ -140,6 +140,8 @@ Si le value.yaml d'un chart évolue beaucoup faite l'effort d'upgrader votre cha
 - conseil 5 : ne pas croire que l'on peut porter un chart d'un cluster à l'autre sans effort. 
 Chaque cluster kubernetes est souvent spécifique (Stockage/CNI/CRI), l'adaptation peut être importante. 
 
+- conseil 6 : il faut bien comprendre le fonctionnement du produit installé par le helm chart. 
+On peut avoir des surprises, par exemple quand le helm chart ne sert qu'à la phase d'initialisation pour peupler une base. Changer ultérieurement les paramètres du `values.yaml` n'auront aucun effet sur les éléments mis en base.  
 
 ## Exercices
 
