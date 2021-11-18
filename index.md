@@ -26,6 +26,7 @@
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [DaemonSet](Chapitres/Daemonset.md)
 - [StatefulSet](Chapitres/StatefulSet.md)
+- 
 
 ### Etape 3 - L'exposition
 - [Service](Chapitres/Service.md)
@@ -51,6 +52,11 @@
 - [Helm](Tools/Helm)
 - [Kustomize](Tools/Kustomize.md)
 - [Opérateur]( Tools/Operateur.md)
+
+### Etape 8 - Pour aller plus loin
+- [PodDisruptionBudget](Chapitres/PodDisruptionBudget.md)
+- Quota
+- WebHook
 
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
