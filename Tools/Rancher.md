@@ -7,3 +7,10 @@ Une fois le ou les clusters Kubernetes ajoutés, Rancher est une IHM qui permet 
 Il offre également un explorateur pour regarder les ressources de vos clusters, et aussi une intégration avec certains outils tel que le Monitoring (Grafana/Prometheus) La persistence avec Longhorn, des règles avec GateKeeper,...
 
 
+![Ajout d'un cluster](../images/Rancher-addCluster.png)
+
+![List des cluster](../images/Rancher-clusterList2.png)
+
+![Dashboard](../images/Rancher-dashboard-1.png)
+
+![Explorer](../images/Rancher-explorer.png)

@@ -3,10 +3,11 @@
 Un pod a une ip non prédictible et il est très volatile.
 Il peut être détruit à tout moment pour être reconstruit ailleurs.
 Il est impossible donc de se fier à son ip pour discuter avec lui, c'est la raison d'être d'un service.
-Le service  joue le role de loadbalancer entre les pods qu'il représente.
-Il peut exposer à l'exterieur du cluster via un NodePort (port identique sur tous les nodes)
+Le service joue le rôle de loadbalancer entre les pods qu'il représente.
+Il peut exposer à l'extérieur du cluster via un NodePort (sur port identique sur tous les nodes)
 
 ![schema](https://obeyler.github.io/Formation-K8S/images/service.svg)
+
 ## Structure
 ```yaml
 apiVersion: v1
@@ -19,12 +20,20 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9376
+      targetPort: 8080
+      
 ```
+
+Le `selector` va permettre de faire le lien avec les pods. 
+Tous les pods (du même namespace que le service) et qui porteront les labels présents dans `selector` seront éligibles à être joignables par le service.  
+Ici, ce sera tous les pods qui portent le label "app: MyApp".
+
 ## le DNS
 Au sein d'un cluster Kubernetes les services sont joignables en
 - nomduservice # au sein du meme namespace
 - nomduservice.nomDeSonNamespace.svc # depuis n'importe quel namespace 
+- nomduservice.nomDeSonNamespace.svc.cluster.local # depuis n'importe quel namespace
+
 Le DNS est le plus souvent fournit par le composant CoreDNS.
 
 

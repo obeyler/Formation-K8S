@@ -49,5 +49,7 @@ tolerations:
   tolerationSeconds: 6000
 ```
 
+## exercice:
+- retrouver les taints posées sur les nodes de vos clusters. 
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PodPlacement.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/RBAC.html)
