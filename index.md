@@ -59,8 +59,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 
 ### Etape 8 - Pour aller plus loin
 - [PodDisruptionBudget](Chapitres/PodDisruptionBudget.md)
-- Quota
-- WebHook
+- [ResourceQuota et LimitRange](Chapitres/ResourceQuota.md)
 
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
