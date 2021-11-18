@@ -2,9 +2,9 @@
 
 ## Role
 Les labels sont très utilisés dans kubernetes. Ils permettent de sélectionner des objects. 
-Ils servent également à les associés par exemple un service et ses pods.
-Un object kubernetes peut avoir 0,1 ou plusieurs labels. Certains labels sont réservés par kubernetes.
-Tous les objects kubernetes peuvent avoir des labels.
+Ils servent également à les associer par exemple à un service et à ses pods.
+Un `object` kubernetes peut avoir 0,1 ou plusieurs labels. Certains labels sont réservés par kubernetes.
+Tous les `objects` kubernetes peuvent avoir des labels.
 Les labels sont placés dans la section `metadata` :
 ```yaml
 ...
@@ -18,13 +18,12 @@ spec:
 ...
 ```
 
-
 ## Exemples de labels réservés
 - kubernetes.io/hostname
 - kubernetes.io/os
 - storageclass.kubernetes.io/is-default-class
 
-Pour aller plus loin : https://kubernetes.io/docs/reference/labels-annotations-taints/
+Pour aller plus loin : [https://kubernetes.io/docs/reference/labels-annotations-taints/](https://kubernetes.io/docs/reference/labels-annotations-taints/)
 
 # Annotation
 ## Role
@@ -42,7 +41,7 @@ spec:
 ```
 
 ## Exemples
-- L'application 'Velero' vont savoir qu'il faut sauvegarder les volumes d'un pod, par l'annotation `backup.velero.io/backup-volumes`
+- L'application 'Velero' va savoir qu'il faut sauvegarder les volumes d'un pod, par l'annotation `backup.velero.io/backup-volumes`
 - L'application 'Cert-manager' va savoir qu'il faut utiliser une certaine methode pour générer un certificat puis secret sur Ingress `cert-manager.io/cluster-issuer: "hello-deployment-tls`.
 - L'application 'Ingress-Nginx' va utiliser les annotations posées sur l'ingress pour paramétrer son nginx 
 

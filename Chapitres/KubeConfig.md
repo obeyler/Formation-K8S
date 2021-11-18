@@ -3,9 +3,9 @@
 Le role d'un fichier `.kube/config` est de définir les crédentials pour se connecter à un cluster K8S.
 Il va définir :
 - un ensemble de cluster (url/data),
-- un ensemble d'utilisateur avec leur crédential 
-- un ensemble de contexts.
-Un context représente couple composé d'un cluster et d'un utilisateur.
+- un ensemble d'utilisateur avec leur crédentials
+- un ensemble de `contexts`.
+Un `context` représente couple composé d'un cluster et d'un utilisateur.
 
 ```yaml
 apiVersion: v1
@@ -31,12 +31,12 @@ contexts:
   name: exp-scratch
 ```
 
-Ce qu'il faut retenir c'est que :
-- ce fichier peut vous permettre de référencer plusieurs clusters,
-- ce fichier peut vous permettre de référencer plusieurs utilisateurs qui auront chacun des droits differents
-- ce fichier est utilisé par de nombreux autres outils pour accéder à votre cluster (Helm, ArgoCd, ...)
-- on peut décomposer ce fichier en n fichiers 
-- peut vous permettre de changer le nom du namespace par défaut 
+Ce qu'il faut retenir c'est que ce fichier:
+- Peut vous permettre de référencer plusieurs clusters.
+- Peut vous permettre de référencer plusieurs utilisateurs qui auront chacun des droits différents
+- Est utilisé par de nombreux autres outils pour accéder à votre cluster (Helm, ArgoCd, ...)
+- Peut être décomposé `n` fichiers
+- Peut vous permettre de changer le nom du namespace par défaut 
 
 ### Comment définir des users
 Comme on peut s'identifier de différentes manières sur un cluster Kubernetes (par Token, par Certificat, par basicauth), il existera différent moyen de renseigner les crédentials d'un utilisateur.
@@ -77,17 +77,16 @@ CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
 ```
 (une '*' vous pointera le context actuellement utilisé)
 
-Pour créer/modifier un context :
+Pour créer/modifier un `context` :
 ```shell
 kubectl config set-context NOM_DU_CONTEXT --cluster CLUSTER_NAME --user USER_NAME (--namespace=MON_NAMESPACE)
 ```
-Pour passer sur un context `NOM_DU_CONTEXT`:
+Pour passer sur un `context` `NOM_DU_CONTEXT`:
 ```shell
 kubectl config use-context NOM_DU_CONTEXT
 ```
 
-
-Pour utiliser un context `NOM_DU_CONTEXT` seulement pour une commande Kubectl sans changer le context courant :
+Pour utiliser un `context` `NOM_DU_CONTEXT` seulement pour une commande Kubectl sans changer le context courant :
 ```shell
 kubectl VOTRE_COMMANDE --context NOM_DU_CONTEXT
 ```
@@ -97,7 +96,7 @@ Pour utiliser un fichier kubeconfig différent de '.kube/config` seulement pour 
 kubectl VOTRE_COMMANDE  --kubeconfig .kube/config-server-1
 ```
 
-Pour changer sur le context courant le nom du namespace par défaut pour `MYNAMESPACE` :
+Pour changer sur le `context` courant le nom du namespace par défaut pour `MYNAMESPACE` :
 ```
 kubectl config set-context --current --namespace=MYNAMESPACE
 ```
