@@ -1,6 +1,5 @@
 # Programme de la formation
-![](images/olivier.png)
-
+![](images/olivier.jpg)
 Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 
 ## Docker
@@ -30,7 +29,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [DaemonSet](Chapitres/Daemonset.md)
 - [StatefulSet](Chapitres/StatefulSet.md)
-- 
+- Job et CronJob
 
 ### Etape 3 - L'exposition
 - [Service](Chapitres/Service.md)
