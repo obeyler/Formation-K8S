@@ -15,8 +15,7 @@ docker images (-a)
 docker build PATH
 ```
 
-## Tagguer une image 
-
+## Tagguer une image
 ```shell
 docker build -t username/image_name:tag_name .
 ```
@@ -33,6 +32,11 @@ docker run (-d) (-p hostPort :containerPort ) (--name NAME ) IMGNAME /IMGID
 ## Voir les logs d'un container
 ```shell
 docker logs ID /NAME (-f --tail NBLINE )
+```
+
+## Détruire un container
+```shell
+docker rm -f CONTAINERNAME/CONTAINERID
 ```
 
 
