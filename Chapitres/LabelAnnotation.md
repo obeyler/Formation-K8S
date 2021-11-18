@@ -27,8 +27,11 @@ Pour aller plus loin : [https://kubernetes.io/docs/reference/labels-annotations-
 
 # Annotation
 ## Role
-Contrairement à un Label, on ne peut pas faire de recherche selective sur une annotation. L'annotation va servir
-à donner des indications pour d'autre processus.
+Contrairement à un Label, on ne peut pas faire de recherche selective sur une annotation. 
+L'annotation va servir 
+- à donner des indications pour d'autre processus. 
+- à garder une trace de l'historique des changements sur l'object
+
 Tout comme les labels, elles sont placées dans la section `metadata` :
 ```yaml
 ...
