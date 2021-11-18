@@ -2,7 +2,7 @@
 ## Role
 Une registry docker est un lieu où l'on va stocker et récupérer des images Docker.
 La registry la plus connue est `dockerhub` (https://hub.docker.com) où l'on trouve la plupart des images des produits connus.
-Ce n'est pas la seule ! Une autre registry tres connue et très utilisé quay.io (RedHat). Chaque grand fournisseur service Cloud (AWS/AZURE,GOOGLE,...) en propose, avec plus ou moins de fonctionnalités offertes.
+Ce n'est pas la seule ! Une autre registry très connue et très utilisé quay.io (RedHat). Chaque grand fournisseur service Cloud (AWS/AZURE,GOOGLE,...) en propose, avec plus ou moins de fonctionnalités offertes.
 > La registry dockerhub a mis en place un mécanisme de RateLimiting 
 > (100 pull/6h en anonyme et 200 pull/6h en utilisateur identifié mais gratuit).
 > L'effet produit est que de nombreux projets n'hébergent plus sur dockerhub et qu'il est souvent
@@ -21,7 +21,7 @@ ce qui aura pour effet de completer le fichier `~/.docker/config.json`
 Plusieurs projets open-source ([Harbor](../Tools/Harbor.md), [JCR](../Tools/Artifactory.md),...) vous permettent de facilement avoir votre propre registry. 
 
 Les avantages d'une registry auto hébergée sont multiples :
-- vous pouvez mieux controller ce qui sera sur votre cluster. 
+- vous pouvez mieux contrôler ce qui sera sur votre cluster. 
 - vous pouvez fonctionner en mode "AirGap" ie sans internet.
 - vous affranchir de téléchargements multiples de la même image depuis d'autres sites et préserver votre bande passante
 - vous affranchir des rate limiting
@@ -40,7 +40,7 @@ Pour cela il suffira de les ajouter dans le fichier `/etc/docker/daemon.json`
 ```
 - Pour ContainerD :
 
-Pour cela il suffira de les ajouter dans le fichier `/etc/conainerd/config.toml` (à noter que ContainerD supporte des mirrors pour des repository autres que docker.io !)
+Pour cela il suffira de les ajouter dans le fichier `/etc/containerd/config.toml` (à noter que ContainerD supporte des mirrors pour des repository autres que docker.io !)
 
 ```
 [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
@@ -56,6 +56,6 @@ Pour cela il suffira de les ajouter dans le fichier `/etc/conainerd/config.toml`
 ```
 
 ## Fonctionnalités avancées
-> Attention à l'usage de certaines fonctionnalités sur les RegistryDocker qui peuvent être alléchantes. 
+> Attention à l'usage de certaines fonctionnalités sur les "RegistryDocker" qui peuvent être alléchantes. 
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/DockerCommand.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/DockerForceFaiblesse.html) 
