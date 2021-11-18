@@ -35,5 +35,5 @@ Exemple:
 Sur un déploiement avec un Replica égal à 3, vous avez un PodDisruptionBudget paramétré avec minAvailable = 2 ou un maxUnavailable = 1.
 Un des pods tombe en erreur, vous ne pourrez pas updater votre cluster automatiquement sans avoir retiré le PodDisruptionBudget (ou avoir corrigé l'erreur).
 En effet, Kubernetes qui va vouloir relancer ses Nodes une par une. Il va chercher à déplacer vos pods (drain node).
-Il n'aura de base pas le droit de le faire : il violerait le contrat posé par le PodDisruptionBudget.
+Il n'aura, de base, pas le droit de le faire : il violerait le contrat posé par le PodDisruptionBudget.
 
