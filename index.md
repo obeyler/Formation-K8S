@@ -36,7 +36,7 @@
 - [StorageClass](Chapitres/StorageClass.md)
 - [PersistentVolume](Chapitres/PersistentVolume.md)
 - [PersistentVolumeClaim](Chapitres/PersistentVolumeClaim.md)
-- 
+ 
 ### Etape 5 - le placement des pods
 - [NodeSelector,Resource,Affinity](Chapitres/PodPlacement.md)
 - [Taint et Tolération](Chapitres/Taint.md)
