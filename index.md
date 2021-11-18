@@ -1,4 +1,8 @@
 # Programme de la formation
+![](images/olivier.png)
+
+Votre formateur : Olivier Beyler (Certifié CKA, CKS)
+
 ## Docker
 - [Docker file](Chapitres/DockerFile.md)
 - [Principales commandes](Chapitres/DockerCommand.md)
