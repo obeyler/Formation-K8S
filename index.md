@@ -1,5 +1,7 @@
 # Programme de la formation
-![](images/olivier.jpg)
+
+<img src="images/olivier.jpg" width="100">
+
 Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 
 ## Docker
