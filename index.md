@@ -56,7 +56,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 ### Etape 7 - Packaging
 - [Helm](Tools/Helm)
 - [Kustomize](Tools/Kustomize.md)
-- [Opérateur]( Tools/Operateur.md)
+- [Opérateur](Tools/Operateur.md)
 
 ### Etape 8 - Pour aller plus loin
 - [PodDisruptionBudget](Chapitres/PodDisruptionBudget.md)
