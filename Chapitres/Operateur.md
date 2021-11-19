@@ -47,7 +47,7 @@ Le controller (s'il a été codé pour ! ) va voir qu'une modification a été a
 
 On pourrait même imaginer (en informatique tout est possible si on peut le coder), que la modification porte sur le type de base.
 On aurait dans ce cas un Job qui viendrait porter les data d'une base Postgres vers une base Mysql.
-Autre modification possible l'ajout d'un paramÃ¨tre de sauvegarde :
+Autre modification possible l'ajout d'un paramètre de sauvegarde :
 
 ```yaml
 apiVersion: beyler.io/V1
@@ -70,5 +70,4 @@ La maturité et la pérennité sont à évaluer pour chacun.
 
 
 
-[Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html), [Menu](https://obeyler.github.io/Formation-K8S/)
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/SecurityContext.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PodDisruptionBudget.html)
