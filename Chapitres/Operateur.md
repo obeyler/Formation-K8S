@@ -19,7 +19,7 @@ Une fois l'opérateur `operateur-beyler-fictif` installé :-)
 On peut créer un nouvel objet :
 ```yaml
 apiVersion: beyler.io/V1
-kind: baseDeDonn�e
+kind: baseDeDonnee
 metadata:
   name: MaBDD
 spec: 
