@@ -31,7 +31,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 - [HorizontalPodAutoscaling](Chapitres/HorizontalPodAutoScaling.md)
 - [DaemonSet](Chapitres/Daemonset.md)
 - [StatefulSet](Chapitres/StatefulSet.md)
-- Job et CronJob
+- [Job et CronJob](Chapitres/JobCronJob.md)
 
 ### Etape 3 - L'exposition
 - [Service](Chapitres/Service.md)

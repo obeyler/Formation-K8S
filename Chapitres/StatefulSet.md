@@ -60,4 +60,4 @@ alors ses pod portent le nom `monstateful-indice` avec indice qui vaut : 0, 1, 2
 - Les Pods ne sont pas garantis d'être supprimés lors de la suppression d'un statefulset
 - Contrairement à un déploiement chaque pod aura ses propres PVC et donc ses propres PV !
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Daemonset.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Service.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Daemonset.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/JobCronJob.html)
