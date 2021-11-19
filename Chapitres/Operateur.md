@@ -1,7 +1,7 @@
 # Opérateur
 
 
-Notion relativement récente et fortement poussée par RedHat, l'opérateur vise Ã  automatiser un ensemble d'opérations.
+Notion relativement récente et fortement poussée par RedHat, l'opérateur vise à automatiser un ensemble d'opérations.
 Là où helm se contente de faire l'installation, la mise à jour, la suppression,
 l'opérateur va s'occuper de l'installation, la maintenance, la migration, l'auto réparation, la destruction, etc.
 Un opérateur ne va pas forcément s'occuper de toutes ces phases.
