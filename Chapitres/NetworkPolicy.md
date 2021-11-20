@@ -48,4 +48,4 @@ Pour concevoir un Network policy, le plus simple est de s'imaginer à partir du 
 - qui va avoir le droit d'appeler sur un port ouvert par le pod,
 - qui le Pod va pouvoir avoir contacter. (Pour se prémunir par exemple d'un container ¨Mineur¨).
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/SecurityContext.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/SecurityContext.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html)
