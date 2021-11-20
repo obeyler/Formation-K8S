@@ -1,6 +1,6 @@
 # KubeConfig
 ## Role 
-Le role d'un fichier `.kube/config` est de définir les crédentials pour se connecter à un cluster K8S.
+Le role d'un fichier `.kube/config` est de définir les crédentials pour se connecter à un cluster K8S. Beaucoup d'autres outils vont s'appuyer sur lui pour vous dialoguer avec vos clusters (Kubectl, Lens, Helm, les CLI Velero,... )
 Il va définir :
 - un ensemble de cluster (url/data),
 - un ensemble d'utilisateur avec leur crédentials
