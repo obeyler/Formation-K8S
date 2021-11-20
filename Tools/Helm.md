@@ -147,4 +147,4 @@ On peut avoir des surprises, par exemple quand le helm chart ne sert qu'à la ph
 
 - créer un chart nommée TOTO en version 1.0 et déployer le
  
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/AdmissionController.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html)

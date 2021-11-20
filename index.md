@@ -53,6 +53,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 - [SecurityContext](Chapitres/SecurityContext.md)
 - [NetworkPolicy](Chapitres/NetworkPolicy.md)
 - [Mise à jour](Chapitres/Maj.md) 
+- [AdmissionController](Chapitres/AdmissionController.md)
 
 ### Etape 7 - Packaging
 - [Helm](Tools/Helm)
