@@ -16,9 +16,10 @@ Il faut donc se prémunir de ce que le container des actions qu'il ne devrait pa
 Plusieurs éléments ou outils vont vous permettre de réaliser cela : 
 - Les RBAC (Role base access control), 
 - Les securityContext, 
+- Les networkPolicy
 - Les admissionController
 - Les mécanismes d'audits 
 - Les scanners d'images docker [snyk](https://snyk.io/), [trivy](https://github.com/aquasecurity/trivy), [clair](https://github.com/quay/clair),..
 - Des outils comme [appArmor](https://apparmor.net) [secComp](https://www.kernel.org/doc/html/v4.16/userspace-api/seccomp_filter.html#) qui bloqueront certaines actions 
-- Des outils ou [falco](http://falco.org/)
+- Des outils comme [falco](http://falco.org/) qui vous aideront à détecter des comportements anormaux.
 
