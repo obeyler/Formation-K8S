@@ -165,4 +165,4 @@ kubectl run toto –i busybox  => Crée et lance un deployment !
 Kubectl run toto –i busybox  => Crée et lance un pod !
 
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/NetworkPolicy.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/AdmissionController.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/NetworkPolicy.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/AdmissionController.html)
