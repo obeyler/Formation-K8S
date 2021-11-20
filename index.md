@@ -48,6 +48,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 - [Taint et Tolération](Chapitres/Taint.md)
 
 ### Etape 6 - La sécurité
+- [Généralités](Chapitres/Securite.md)
 - [RBAC](Chapitres/RBAC.md)
 - [SecurityContext](Chapitres/SecurityContext.md)
 - [NetworkPolicy](Chapitres/NetworkPolicy.md)
