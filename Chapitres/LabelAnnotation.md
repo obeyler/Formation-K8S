@@ -1,15 +1,15 @@
 # Label
 
 ## Role
-Les labels sont très utilisés dans kubernetes. Ils permettent de sélectionner des objects. 
+Les labels sont très utilisés dans kubernetes. Ils permettent de sélectionner des resources. 
 Ils servent également à les associer par exemple à un service et à ses pods.
-Un `object` kubernetes peut avoir 0,1 ou plusieurs labels. Certains labels sont réservés par kubernetes.
-Tous les `objects` kubernetes peuvent avoir des labels.
+Une `resource` kubernetes peut avoir 0,1 ou plusieurs labels. Certains labels sont réservés par kubernetes.
+Tous les `resources` kubernetes peuvent avoir des labels/ 
 Les labels sont placés dans la section `metadata` :
 ```yaml
 ...
 metadata:
-  name: <NOM-DE-L-OBJECT>
+  name: <NOM-DE-LA-RESOURCE>
   labels:
     toto: Carabo
     app: Velo
@@ -36,7 +36,7 @@ Tout comme les labels, elles sont placées dans la section `metadata` :
 ```yaml
 ...
 metadata:
-  name: <NOM-DE-L-OBJECT>
+  name: <NOM-DE-LA-RESOURCE>
   annotations:  
     backup.velero.io/backup-volumes: <NOM-DU-VOLUME>
 spec:
