@@ -87,24 +87,6 @@ On installe souvent des produits via des helm charts, l'upgrade d'un cluster Kub
 > Il faut toujours consulter le ChangeLog de la version 1.X.0 section `Whats News` pour anticiper les évolutions à prévoir !!
 
 #### Exemple d'évolution :
-```yaml
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: nginxingress
-  annotations:
-   nginx.ingress.kubernetes.io/auth-type: basic
-   nginx.ingress.kubernetes.io/auth-secret: basic-auth
-spec:
-  rules:
-  - host: nginx.mycompany.com
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: http-svc
-          servicePort: 80
-```
 
 ```yaml
 apiVersion: extensions/v1beta1  # <========= !!!
@@ -112,8 +94,8 @@ kind: Ingress
 metadata:
   name: nginxingress
   annotations:
-    ingress.kubernetes.io/auth-type: basic      # <========= !!!
-    ingress.kubernetes.io/auth-secret: mypasswd # <========= !!!
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: basic-auth
 spec:
   rules:
   - host: nginx.mycompany.com
@@ -125,6 +107,28 @@ spec:
           servicePort: 80
 ```
 
+puis en version Kubernetes 1.18
+
+```yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginxingress
+  annotations:
+    ingress.kubernetes.io/auth-type: basic
+    ingress.kubernetes.io/auth-secret: mypasswd
+spec:
+  rules:
+  - host: nginx.mycompany.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: http-svc
+          servicePort: 80
+```
+
+à partir de Kubernetes 1.19
 
 ```yaml
 apiVersion: networking.k8s.io/v1  # <========= !!!
