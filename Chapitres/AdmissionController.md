@@ -19,4 +19,4 @@ Par exemple, on peut déclarer des règles qui vont empêcher :
 
 Il existe des exemples de règles applicables [ici](https://github.com/open-policy-agent/gatekeeper-library).
 
-[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Retour](https://obeyler.github.io/Formation-K8S/Tools/Helm.html)
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Maj.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Tools/Helm.html)
