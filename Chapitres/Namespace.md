@@ -6,7 +6,7 @@ On peut également appliquer des règles de sécurités au sein d'un namespace e
 ![schema](https://obeyler.github.io/Formation-K8S/images/namespace.svg)
 
 Toutes les resources Kubernetes n'appartiennent pas à des namespaces. 
-Certaines sont au Cluster.
+Certaines sont liées au Cluster.
 
 Il existe des namespaces spécifiques :
 - default (celui où vous vos objects kubernetes iront si vous ne spécifiez pas de namespace et si vous ne l'avez pas changé via votre contexte)
