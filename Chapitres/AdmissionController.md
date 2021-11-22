@@ -31,9 +31,12 @@ webhooks:
     resources:
     - deployments        #<== liste des resources qui sont concernées
   clientConfig:
-    service:
+    url: "https://my-webhook.example.com:9443/my-webhook-path"    <== soit une url
+    service:                                                      <= soit un service
       namespace: <NAMESPACE_DU_SERVICE>
       name: <NOM_DU-SERVICE>
+      path: /<Chemin> 
+      port: <Port>
     caBundle: <pem encoded ca cert du serveur webhook>
 ```
 
