@@ -66,9 +66,10 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
-- [Lab 2](Exercices/Lab-002.md) (resource probe)
-- [Lab 3](Exercices/Lab-003.md) (Placement)
-- [Lab 3](Exercices/Lab-005.md) (RBAC)
+- [Lab 2](Exercices/Lab-002.md) (le placement)
+- [Lab 3](Exercices/Lab-003.md) (RBAC)
+- [Lab 4](Exercices/Lab-004.md) (Helm)
+- [Lab 5](Exercices/Lab-005.md) ()
 
 ## Ecosysteme & outils
 
