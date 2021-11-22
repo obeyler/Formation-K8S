@@ -13,6 +13,30 @@ Certains contrôleurs sont à la fois mutant et validant.
 
 ![schema](https://obeyler.github.io/Formation-K8S/images/AdmissionControl.svg)
 
+## Structure
+```yaml
+apiVersion: admissionregistration.k8s.io/v1beta1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: <NOM_DE_LA_CONFIGURATION>
+webhooks:
+- name: <NOM_DU_WEBHOOK>
+  rules:
+  - apiGroups: 
+    - apps
+    apiVersions:
+    - v1                 #<== liste des versions impactées par ce webhook
+    operations:
+    - CREATE             #<== liste des verbes HTTP qui déclencheront l'appel vers le Webhook
+    resources:
+    - deployments        #<== liste des resources qui sont concernées
+  clientConfig:
+    service:
+      namespace: <NAMESPACE_DU_SERVICE>
+      name: <NOM_DU-SERVICE>
+    caBundle: <pem encoded ca cert du serveur webhook>
+```
+
 ## GateKeeper
 Un outil comme [GateKeeper](https://github.com/open-policy-agent/gatekeeper) adaptation dédiée kubernetes d'[OPA](https://www.openpolicyagent.org) utilise ce principe pour permettre de définir ce qui a le droit d'être fait ou pas sur votre cluster.
 Par exemple, on peut déclarer des règles qui vont empêcher : 
