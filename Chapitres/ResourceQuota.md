@@ -62,3 +62,5 @@ spec:
       cpu: 0.1      #<=== valeur Minimum autorisée 
     type: Container
 ```
+
+[Retour](https://obeyler.github.io/Formation-K8S/Chapitres/PodDisruptionBudget.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/ETCD.html)_

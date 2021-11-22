@@ -37,3 +37,5 @@ Un des pods tombe en erreur, vous ne pourrez pas updater votre cluster automatiq
 En effet, Kubernetes qui va vouloir relancer ses Nodes une par une. Il va chercher à déplacer vos pods (drain node).
 Il n'aura, de base, pas le droit de le faire : il violerait le contrat posé par le PodDisruptionBudget.
 
+
+[Retour](https://obeyler.github.io/Formation-K8S/Tools/Operateur.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/ResourceQuota.html)_

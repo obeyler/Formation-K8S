@@ -69,4 +69,5 @@ La maturité et la pérennité sont à évaluer pour chacun.
 
 
 
-[Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html), [Menu](https://obeyler.github.io/Formation-K8S/)
+[Retour](https://obeyler.github.io/Formation-K8S/Tools/Kustomize.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/PodDisruptionBudget.html)_
+
