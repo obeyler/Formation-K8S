@@ -63,6 +63,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 ### Etape 8 - Pour aller plus loin
 - [PodDisruptionBudget](Chapitres/PodDisruptionBudget.md)
 - [ResourceQuota et LimitRange](Chapitres/ResourceQuota.md)
+- [ETCD](Chapitres/ETCD.md)
 
 ## Mise en pratique
 - [Lab 1](Exercices/Lab-001.md) (deploiement pod configmap service secret )  
