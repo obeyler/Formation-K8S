@@ -11,6 +11,8 @@ Dans la première phase, les contrôleurs d'admission mutants sont exécutés.
 Dans la deuxième phase, les contrôleurs d'admission de validation sont exécutés. N
 Certains contrôleurs sont à la fois mutant et validant.
 
+![schema](https://obeyler.github.io/Formation-K8S/images/AdmissionControl.svg)
+
 ## GateKeeper
 Un outil comme [GateKeeper](https://github.com/open-policy-agent/gatekeeper) adaptation dédiée kubernetes d'[OPA](https://www.openpolicyagent.org) utilise ce principe pour permettre de définir ce qui a le droit d'être fait ou pas sur votre cluster.
 Par exemple, on peut déclarer des règles qui vont empêcher : 
