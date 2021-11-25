@@ -70,7 +70,7 @@ spec:
                         
     restartPolicy: Never
 ```
-On peut s'en servir pour monter un fichier unique dans un pod
+On peut s'en servir pour monter un repertoire avec certains fichiers de la configMap dans un pod
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -91,8 +91,36 @@ spec:
         items:
         - key: exemple.yaml
           path: exemple.yaml
+        - key: exemple2.yaml
+          path: exemple2.yaml        
   restartPolicy: Never
 ```
+
+> Attention : on a toujours dans ce cas un montage d'un repertoire complet (qui ne contient qu'un fichier) 
+
+On peut s'en servir pour monter un fichier unique de la configMap dans un pod 
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-volume-file
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh","-c","cat /etc/config/exemple.yaml" ]
+      volumeMounts:
+      - name: config-volume
+        mountPath: /etc/config/example.yaml     #<==== Un seul fichier sera posé dans le repertoire
+        subPath: example.yaml                   #<==== Un seul fichier contenu dans la CM 
+  volumes:
+    - name: config-volume
+      configMap:
+        name: myconfigmap-file
+  
+  restartPolicy: Never
+```
+ 
 On peut s'en servir pour monter des fichiers dans un pod
 ```yaml
 apiVersion: v1
