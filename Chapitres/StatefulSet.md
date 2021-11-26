@@ -7,6 +7,8 @@ Les StatefulSets sont utiles pour des applications qui nécessitent une ou plusi
 - Un déploiement et une mise à l'échelle ordonnés et contrôlés.
 - Des mises à jour continues (rolling update) ordonnées et automatisées.
 
+![schema](https://obeyler.github.io/Formation-K8S/images/statefulset.svg)
+
 > Ci-dessus, stable est synonyme de persistance suite au (re)scheduling de Pods. Si une application ne nécessite aucun identifiants stables ou de déploiement, suppression ou mise à l'échelle stables, vous devriez déployer votre application en utilisant un objet de charge de travail fournissant un ensemble de réplicas sans état (stateless).
 Un Deployment ou ReplicaSet peut être mieux adapté pour vos applications sans états.
 (dixit https://kubernetes.io/fr/docs/concepts/workloads/controllers/statefulset/)
