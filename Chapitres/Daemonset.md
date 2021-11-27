@@ -9,6 +9,7 @@ Par exemples :
 - l'installation d'un outil sur chaque node,
 - l'installation d'une couche réseau.
 
+![schema](https://obeyler.github.io/Formation-K8S/images/daemonset.svg)
 > Attention : Le daemonSet ne s'affranchit pas des contraintes posées sur le cluster : taint/resources/...
 > ie si un pod n'a pas le droit de s'installer sur un Node il n'y sera pas !
 
