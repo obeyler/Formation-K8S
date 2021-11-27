@@ -130,7 +130,7 @@ Aussi mieux vaut ne pas les copier, mais juste surcharger les parties que vous v
 
 - conseil 3 :
 Ne pas suivre systématiquement les upgrades des versions de vos helm chart, se contenter de ceux qui vont corriger un bug qui vous concerne ou qui change la version des images dockers (donc du produit).
-En effet, on peut avoir des fréquences de release de helm chart 2 à 3 fois... par jour pour certain !
+En effet, on peut avoir des fréquences de release de helm chart 2 à 3 fois... par semaine (voir par jour) pour certain !
 exemple: 
 ![fluentd](../images/fluend.jpg)
 
@@ -141,7 +141,8 @@ Si le value.yaml d'un chart évolue beaucoup faite l'effort d'upgrader votre cha
 Chaque cluster kubernetes est souvent spécifique (Stockage/CNI/CRI), l'adaptation peut être importante. 
 
 - conseil 6 : il faut bien comprendre le fonctionnement du produit installé par le helm chart. 
-On peut avoir des surprises, par exemple quand le helm chart ne sert qu'à la phase d'initialisation pour peupler une base. Changer ultérieurement les paramètres du `values.yaml` n'auront aucun effet sur les éléments mis en base.  
+On peut avoir des surprises, par exemple quand le helm chart ne sert qu'à la phase d'initialisation pour peupler une base. 
+Changer ultérieurement les paramètres du `values.yaml` n'aura aucun effet sur les éléments mis en base.  
 
 ## Exercices
 
