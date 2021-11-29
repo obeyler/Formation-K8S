@@ -15,7 +15,7 @@ kubectl get <TypeDObjet> -n <mon_namespace>
 
 Pour récupérer la liste des objets d'un certain type quelque soit leur namespace :
 ```shell
-kubectl get <TypeDObjet> --A
+kubectl get <TypeDObjet> -A
 ou 
 kubectl get <TypeDObjet> --all-namespaces
 ```
