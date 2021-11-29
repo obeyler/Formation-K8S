@@ -52,7 +52,7 @@ Tous les pods seront tués avant de recréer de nouveau pod.
 ### type RollingUpdate
 Le RollingUpdate s'appuie sur deux paramètres `maxUnavailable` et `maxSurge`.
 
-`maxUnavailable` : exprimée en valeur absolue ou en pourcentage, donne le nombre de pods qui pourront être indisponibles
+`maxUnavailable` : exprimée en valeur absolue ou en pourcentage, donne le nombre de pods qui pourront être indisponibles, 
 par default la valeur est de 25%.
 Par exemple, lorsque cette valeur est fixée à 30 %, 
 l'ancien ReplicaSet peut être réduit à 70 % des pods souhaités dès le début de la mise à jour. 
