@@ -49,7 +49,7 @@ kubectl get <TypeDObjet> -n <mon_namespace> object -o yaml
 ```
 Pour éditer le yaml d'un objet :
 ```shell
-kubectl edit <TypeDObjet> -n <mon_namespace> object -o yaml
+kubectl edit <TypeDObjet> -n <mon_namespace> object 
 ```
 
 Pour détruire un objet d'un certain type qui appartiennent à un namespace :
