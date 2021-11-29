@@ -85,12 +85,12 @@ kubectl describe deployment/nginx-deployment
 kubectl rollout history deployment/nginx-deployment
 ```
 
-Pour revenir en arriere d'un déploiement :
+Pour revenir en arrière d'un déploiement :
 ```shell
 kubectl rollout undo deployment/nginx-deployment
 ```
 
-Pour revenir en arriere d'un déploiement vers une révision particuliere :
+Pour revenir en arrière d'un déploiement vers une révision particulière :
 ```shell
 kubectl rollout undo deployment/nginx-deployment --to-revision=2
 ```
