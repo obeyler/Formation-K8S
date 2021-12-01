@@ -74,8 +74,8 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 
 ## Ecosysteme & outils
 
-
-- [Metric-server](Tools/MetricServer)
+- [Dashboard](Chapitres/Dashboard.md)
+- [Metric-server](Tools/MetricServer.md)
 - [Cert-manager](Tools/CertManager.md)
 - [Prometheus](Tools/Prometheus.md)
 - [Grafana](Tools/Grafana.md)
