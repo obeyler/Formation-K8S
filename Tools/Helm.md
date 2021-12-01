@@ -76,7 +76,7 @@ et meme un moteur de recherche pour trouver les charts : [https://hub.helm.sh/ch
 ## A savoir sur l'usage
 
 Pour affecter une variable qui servira pour les templates, 
-- les `-set key=valeur` sont prioritaires, 
+- les `--set key=valeur` sont prioritaires, 
 - puis le(s) fichiers `values.yaml` fournit en ligne 
 - puis enfin les valeurs présentent dans le fichier `values.yaml` du chart.
 
