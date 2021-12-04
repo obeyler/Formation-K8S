@@ -39,7 +39,7 @@ images:
   newName: foo/bar
   newTag: 3.4.5
 ```
-On aura souvent usage d'une arborescence tel que celle-ci :
+On aura souvent usage d'une arborescence telle que celle-ci :
 ```
 |__ base
 │   |__ deployment.yaml
