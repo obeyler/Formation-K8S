@@ -70,7 +70,7 @@ Votre formateur : Olivier Beyler (Certifié CKA, CKS)
 - [Lab 2](Exercices/Lab-002.md) (le placement)
 - [Lab 3](Exercices/Lab-003.md) (RBAC)
 - [Lab 4](Exercices/Lab-004.md) (Helm)
-- [Lab 5](Exercices/Lab-005.md) ()
+- [Lab 5](Exercices/Lab-005.md) (Kustomize)
 
 ## Ecosysteme & outils
 

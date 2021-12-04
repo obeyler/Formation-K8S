@@ -39,5 +39,19 @@ images:
   newName: foo/bar
   newTag: 3.4.5
 ```
+On aura souvent usage d'une arborescence tel que celle-ci :
+```
+|__ base
+│   |__ deployment.yaml
+│   |__ service.yaml
+│   |__ ...
+│   |__ kustomization.yaml
+│
+│__ overlay
+│   |__ dev
+│   |    |__ kustomization.yaml
+│   |__ prod
+│        |__ kustomization.yaml
+```
 
 [Retour](https://obeyler.github.io/Formation-K8S/Tools/Helm.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Operateur.html)
