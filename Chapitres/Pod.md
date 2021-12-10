@@ -138,6 +138,7 @@ exemple :
       initialDelaySeconds: 3
       periodSeconds: 3
 ```
+![schema](https://obeyler.github.io/Formation-K8S/images/probe2.svg)
 
 > Kubernetes n'est pas magicien, si vos containers n'ont pas de mécanisme permettant de détecter le coté "je suis en vie" et/ou le côté "je suis apte à travailler", il ne fera pas de miracle. 
 > Mettre une sonde mal configurée aura pour effet de refaire démarrer votre pod ou le rendre inutilisable.
