@@ -43,7 +43,7 @@ Complete 1.20 Schedule and Changelog
 Il faut parfois se rapprocher de votre fournisseur qui aura une vision différente de la fin de support :
 Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires. 
 
-exemple Amazon EKS: 
+### exemple Amazon EKS: 
 
 |Version de Kubernetes|	Version en amont	Amazon EKS |Fin du support|
 |:------------ |:---------------:|:----------------:|
@@ -53,7 +53,7 @@ exemple Amazon EKS:
 |1.20	                |8 décembre 2020|	      Juin 2022|
 
 
-exemple AKS (azure)
+### exemple AKS (azure)
 
 |Version de K8s|	Sortie en amont|	Préversion d’AKS|	Version GA d’AKS|	Fin de vie|
 |:------------ |:---------------:|:----------------:|:---------------:|:----------:|
@@ -65,7 +65,7 @@ exemple AKS (azure)
 
 > :warning: La version 1.19 sera déconseillée et supprimée d’AKS à la fin du mois de janvier 2022.
 
-exemple  GCP
+### exemple  GCP
 
 |Version de Kubernetes	|Date de disponibilité de Kubernetes	|Démarrage de la disponibilité|	Démarrage des mises à niveau|	Fin de vie|
 |:------------ |:---------------:|:----------------:|:---------------:|:----------:|
@@ -78,8 +78,14 @@ exemple  GCP
 |1.22|	2021-08-04|	2021-12|	2022-04|	2023-01|
 |1.23|	2021-12-14|	2022-03|	2022-07|	2023-05|
 
+### exemple Rke
 
-Pour Rancher/RKE, il faut consulter le site https://www.suse.com/lifecycle/ 
+Pour Rancher/RKE, il est difficile de savoir... Suze faisant un subtil mélange entre RKE et Rancher.
+- Rancher s'installe sur _n_ versions de RKE, 
+- Rancher gére **l'usage** de _m_ versions de RKE / _z_ version de K3S
+mais Suze communique sur le cycle de vie de rancher mais pas de RKE/RKE2/K3S
+
+il faut consulter le site https://www.suse.com/lifecycle/ 
 
 ## CVE
 Chaque patch amène son lot de correction de bug, mais aussi quelques fois des correctifs de CVE.
