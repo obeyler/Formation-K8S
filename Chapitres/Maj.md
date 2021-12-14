@@ -54,6 +54,7 @@ exemple Amazon EKS:
 
 
 exemple AKS (azure)
+
 |Version de K8s|	Sortie en amont|	Préversion d’AKS|	Version GA d’AKS|	Fin de vie|
 |:------------ |:---------------:|:----------------:|:---------------:|:----------:|
 |1.19*	       |4 août 20        |	Septembre 2020  |	Nov. 2020	      | 1.22 GA|
@@ -64,7 +65,8 @@ exemple AKS (azure)
 
 > :warning: La version 1.19 sera déconseillée et supprimée d’AKS à la fin du mois de janvier 2022.
 
-exemple  GCP 
+exemple  GCP
+
 |Version de Kubernetes	|Date de disponibilité de Kubernetes	|Démarrage de la disponibilité|	Démarrage des mises à niveau|	Fin de vie|
 |:------------ |:---------------:|:----------------:|:---------------:|:----------:|
 |1.16 et versions antérieures|	Fin de vie|
