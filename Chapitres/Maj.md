@@ -65,6 +65,7 @@ Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires.
 
 > :warning: La version 1.19 sera déconseillée et supprimée d’AKS à la fin du mois de janvier 2022.
 
+
 ### exemple  GCP
 
 |Version de Kubernetes	|Date de disponibilité de Kubernetes	|Démarrage de la disponibilité|	Démarrage des mises à niveau|	Fin de vie|
@@ -77,6 +78,7 @@ Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires.
 |1.21|	2021-04-08|	2021-10-01|	2022-01|	2022-10|
 |1.22|	2021-08-04|	2021-12|	2022-04|	2023-01|
 |1.23|	2021-12-14|	2022-03|	2022-07|	2023-05|
+
 
 ### exemple Rke
 
