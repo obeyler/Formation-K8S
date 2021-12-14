@@ -43,6 +43,16 @@ Complete 1.20 Schedule and Changelog
 Il faut parfois se rapprocher de votre fournisseur qui aura une vision différente de la fin de support :
 Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires. 
 
+### Kubernetes
+
+|Version de Kubernetes |Fin du support|
+|:------------ |:----------------:|
+|1.19 et versions anterieures |Fin de vie|
+|1.20	  |	     2022-02|
+|1.21	  |	     2022-06|
+|1.22	  |	     2022-10|
+
+
 ### exemple Amazon EKS: 
 
 |Version de Kubernetes|	Version en amont	Amazon EKS |Fin du support|
