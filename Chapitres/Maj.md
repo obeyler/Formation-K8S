@@ -83,9 +83,11 @@ Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires.
 ### exemple Rke
 
 Pour Rancher/RKE, il est difficile de savoir... Suze faisant un subtil mélange entre RKE et Rancher.
+
 - Rancher s'installe sur _n_ versions de RKE, 
 - Rancher gére **l'usage** de _m_ versions de RKE / _z_ version de K3S
-mais Suze communique sur le cycle de vie de rancher mais pas de RKE/RKE2/K3S
+ 
+Actuellement Suze communique sur le cycle de vie de rancher mais pas sur ceux de RKE/RKE2/K3S
 
 il faut consulter le site https://www.suse.com/lifecycle/ 
 
