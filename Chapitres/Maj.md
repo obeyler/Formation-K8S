@@ -95,7 +95,8 @@ Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires.
 Pour Rancher/RKE, il est difficile de savoir... Suze faisant un subtil mélange entre RKE et Rancher.
 
 - Rancher s'installe sur _n_ versions de RKE, 
-- Rancher gére **l'usage** de _m_ versions de RKE / _z_ version de K3S
+- Rancher gére **l'usage** de _m_ versions de RKE / _z_ versions de K3S
+- RKE pour une version donnée peut utiliser differentes versions de K8S cf https://github.com/rancher/rke/releases/tag/v1.3.2 
  
 Actuellement Suze communique sur le cycle de vie de rancher mais pas sur ceux de RKE/RKE2/K3S
 
