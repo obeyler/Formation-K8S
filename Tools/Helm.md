@@ -114,33 +114,41 @@ helm upgrade --install <NOM-DE-L-INSTANCE> <NOM-DU-CHART.tgz ou NOM-DU-REPO/NOM-
 ```
 
 ### Attention / conseils 
-- conseil 0 :
+- conseil 1 :
 Éviter le passage par paramètres `--set param=xx` si vous pouvez passer par un fichier `values.yaml`
 Lors d'un update vous allez avoir tendance à oublier de remettre les `--set..`
 
-- conseil 1 : 
+- conseil 2 : 
 Il n'y a pas de norme pour les Charts ! Plusieurs charts existent souvent pour le même produit. 
 Le fichier `values.yaml` sera propre à chaque version chart ! 
 Le chart d'Harbor fait par Bitnami© n'est pas le même que le chart d'Harbor fait par VmWare© ! 
 Ils ne sont pas interchangeables !
 
-- conseil 2 :
+- conseil 3 : 
+Dans un chart, il est fait référence à une ou des images docker. Si on peut souvent sans trop de problème ugrader la version (ie le tag de l'image), n'envisagez pas de pouvoir échanger l'image docker pour celle d'une autre registry (même si son nom est proche !). Rappelez vous bien qu'une image docker est faite à partir d'un docker file. Il y a peu de chance que deux concepteurs de docker file d'un produit suivent la même logique (variables d'environnements, emplacement des fichiers, etc). 
+Exemple pour Gogs un repository git : 
+
+  - [gogs/gogs](https://github.com/gogs/gogs/blob/main/docker/Dockerfile.aarch64)
+  - [openshiftdemos/gogs](https://github.com/OpenShiftDemos/gogs-openshift-docker/blob/master/Dockerfile)
+  - [robertbeal/gogs](https://github.com/robertbeal/docker-gogs/blob/main/Dockerfile)
+
+- conseil 4 :
 Les fichiers `values.yaml` peuvent être très long et très dense (cf https://github.com/concourse/concourse-chart/blob/master/values.yaml + de 3000 lignes !). 
 Aussi mieux vaut ne pas les copier, mais juste surcharger les parties que vous voulez modifier.
 
-- conseil 3 :
+- conseil 5 :
 Ne pas suivre systématiquement les upgrades des versions de vos helm chart, se contenter de ceux qui vont corriger un bug qui vous concerne ou qui change la version des images dockers (donc du produit).
 En effet, on peut avoir des fréquences de release de helm chart 2 à 3 fois... par semaine (voir par jour) pour certain !
 exemple: 
 ![fluentd](../images/fluend.jpg)
 
-- conseil 4 : un peu contradictoire avec le 3 :-), 
+- conseil 6 : un peu contradictoire avec le 3 :-), 
 Si le value.yaml d'un chart évolue beaucoup faite l'effort d'upgrader votre chart. Sinon, quand vous serez obligé par une montée de version de Kubernetes de mettre à jour votre Helm chart... vous allez souffrir !
 
-- conseil 5 : ne pas croire que l'on peut porter un chart d'un cluster à l'autre sans effort. 
+- conseil 7 : ne pas croire que l'on peut porter un chart d'un cluster à l'autre sans effort. 
 Chaque cluster kubernetes est souvent spécifique (Stockage/CNI/CRI), l'adaptation peut être importante. 
 
-- conseil 6 : il faut bien comprendre le fonctionnement du produit installé par le helm chart. 
+- conseil 8 : il faut bien comprendre le fonctionnement du produit installé par le helm chart. 
 On peut avoir des surprises, par exemple quand le helm chart ne sert qu'à la phase d'initialisation pour peupler une base. 
 Changer ultérieurement les paramètres du `values.yaml` n'aura aucun effet sur les éléments mis en base.  
 
