@@ -44,13 +44,39 @@ Il faut parfois se rapprocher de votre fournisseur qui aura une vision différen
 Charge à vous de vous assurer qu'il apporte bien les correctifs nécessaires. 
 
 exemple Amazon EKS: 
-```
-Version de Kubernetes	Version en amont	Amazon EKS Fin du support
-1,17	                9 décembre 2019	    2 novembre 2021
-1.18	                23 mars 2020	   18 février 2022
-1.19	                26 août 2020	      Avril 2022
-1.20	                8 décembre 2020	      Juin 2022
-```
+
+|Version de Kubernetes|	Version en amont	Amazon EKS |Fin du support|
+|:------------ |:---------------:|:----------------:|
+|1,17	                |9 décembre 2019	|    2 novembre 2021|
+|1.18	                |23 mars 2020	   |18 février 2022|
+|1.19	                |26 août 2020	   |   Avril 2022|
+|1.20	                |8 décembre 2020|	      Juin 2022|
+
+
+exemple AKS (azure)
+|Version de K8s|	Sortie en amont|	Préversion d’AKS|	Version GA d’AKS|	Fin de vie|
+|:------------ |:---------------:|:----------------:|:---------------:|:----------:|
+|1.19*	       |4 août 20        |	Septembre 2020  |	Nov. 2020	      | 1.22 GA|
+|1.20	  |8 décembre2020	|Janvier 2021	|Mars 2021	|1.23 GA|
+|1.21	|8 avril 2021	|Mai 2021|	Juil. 2021	|1.24 GA|
+|1,22	|04 août 21	|Septembre 2021|	Novembre 2021	|1.25 GA|
+|1.23	|Décembre 2021|	Janvier 2022|	Février 2022	|1.26 GA|
+
+> :warning: La version 1.19 sera déconseillée et supprimée d’AKS à la fin du mois de janvier 2022.
+
+exemple  GCP 
+|Version de Kubernetes	|Date de disponibilité de Kubernetes	|Démarrage de la disponibilité|	Démarrage des mises à niveau|	Fin de vie|
+|:------------ |:---------------:|:----------------:|:---------------:|:----------:|
+|1.16 et versions antérieures|	Fin de vie|
+|1.17|	2019-12-09|	2020-09-15|	2020-08-26|	2022-01|
+|1.18|	2020-03-23|	2021-01-15|	2022-02-17|	2022-03|
+|1.19|	2020-08-26|	2021-04-18|	2021-08-12|	2022-06|
+|1.20|	2020-12-08|	2021-06-15|	2022-10-29|	2022-08|
+|1.21|	2021-04-08|	2021-10-01|	2022-01|	2022-10|
+|1.22|	2021-08-04|	2021-12|	2022-04|	2023-01|
+|1.23|	2021-12-14|	2022-03|	2022-07|	2023-05|
+
+
 Pour Rancher/RKE, il faut consulter le site https://www.suse.com/lifecycle/ 
 
 ## CVE
