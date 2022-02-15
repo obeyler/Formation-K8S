@@ -52,10 +52,12 @@ Il arrive que lors d'une suppression de namespace celui-ci reste bloqué en mode
 - Seulement en dernier recours supprimer le finalizer du namespace
 
 ## Exercice:
-- Création d'un namespace "TEST-NOM-PRENOM"
-- Création d'un deuxième namespace "NOM-PRENOM"
+
+- Essayer de créer un namespace "TEST-<NOM>-<PRENOM>" pourquoi K8S ne l'accepte t il pas ?
+- Création d'un namespace "test-<nom>-<prenom>" 
+- Création d'un deuxième namespace "<nom>-<prenom>"
 - Affichage du yaml de votre namespace
 - Lister les namespaces
-- Modifier votre contexte (cf KubeConfig) pour prendre comme namespace par défaut votre namespace "NOM-PRENOM"
+- Modifier votre contexte (cf KubeConfig) pour prendre comme namespace par défaut votre namespace "<nom>-<prenom>"
 
 [Retour](https://obeyler.github.io/Formation-K8S/Chapitres/Commandes.html), [Menu](https://obeyler.github.io/Formation-K8S/), [Suite](https://obeyler.github.io/Formation-K8S/Chapitres/Pod.html) 
