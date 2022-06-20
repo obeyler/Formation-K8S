@@ -1,6 +1,6 @@
 # ConfigMap
 ## Role
-Un ConfigMap est une collection de données qui pourront être utilisées soit comme des variables d'environnements, soit comme des référence vers des fichiers que l'on pourra fournir à des Pods.
+Un ConfigMap est une collection de données qui pourra être utilisée soit comme des variables d'environnements, soit comme des références vers des fichiers que l'on pourra fournir à des Pods.
 Il faut garder comme principe en tête que l'on ne doit pas mettre de données sensibles dans un configmap (un secret est plus approprié pour cela).
 Un configmap est lu au démarrage du pod. Une fois celui-ci démarré, un changement dans le configmap ne sera pas forcément répercuté sur le pod : cela dépendra de la configuration de kubelet.
 
