@@ -1,6 +1,6 @@
 # Label
 
-## Role
+## Un role de lien entre ressource ou selector 
 Les labels sont très utilisés dans kubernetes. Ils permettent de sélectionner des resources. 
 Ils servent également à les associer par exemple à un service et à ses pods.
 Une `resource` kubernetes peut avoir 0,1 ou plusieurs labels. Certains labels sont réservés par kubernetes.
@@ -17,11 +17,50 @@ metadata:
 spec:
 ...
 ```
+## Un role lié à la sécurité
+Depuis la version 1.23 de K8S un nouveau usage, lié à la sécurité, est apparu sur les namespace :
+```
+pod-security.kubernetes.io/<MODE>: <NIVEAU>
+pod-security.kubernetes.io/<MODE>-version: <VERSION>
+```
+
+exemple: 
+```yaml
+...
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mon_namespace
+  labels:
+    pod-security.kubernetes.io/enforce: baseline
+    pod-security.kubernetes.io/enforce-version: v1.24
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: v1.24
+...
+```
+
+
+Pour éviter d'être surpris par des changement de contrainte sur une monté de version on peut fixer la version qui sera utilisée.
+On peut utiliser differents modes préconfigurés :
+- enforce : Tous les pods qui violent la politique seront rejetés
+- audit : Les violations seront enregistrées comme une annotation dans les journaux d'audit, mais n'affecteront pas l'autorisation du pod.
+- warn : Les violations enverront un message d'avertissement à l'utilisateur, mais n'affecteront pas l'autorisation du pod.
+  
+On peut utiliser differents niveaux préconfigurés :
+
+- privileged: ouvert et sans restriction
+- baseline: Couvre les escalades de privilèges connues tout en minimisant les restrictions
+- restricted: Fortement restreint, renforcement contre les escalades de privilèges connues et inconnues et peut causer des problèmes de compatibilité.
+
 
 ## Exemples de labels réservés
 - kubernetes.io/hostname
 - kubernetes.io/os
 - storageclass.kubernetes.io/is-default-class
+
+
 
 Pour aller plus loin : [https://kubernetes.io/docs/reference/labels-annotations-taints/](https://kubernetes.io/docs/reference/labels-annotations-taints/)
 
