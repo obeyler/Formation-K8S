@@ -85,6 +85,8 @@ Il en existe beaucoup !
 - contour (https://github.com/heptio/contour)
 - kong (https://github.com/Kong/kubernetes-ingress-controller)
 
+Une liste plus exaustive des fournisseurs avec leurs differentes caractéristiques se trouve ici : https://docs.google.com/spreadsheets/d/191WWNpjJ2za6-nbG4ZoUMXMpUK8KlCIosvQB0f-oq3k/edit#gid=907731238
+
 Attention, les annotations qui pilotent souvent les comportements des IngressController sont là plus part du temps propre à chaque fournisseur, et même au sein d'un même fournisseur, d'une version n à une version n+1 les annotations peuvent changer radicalement !
 
 > Conseil bien choisir son ingress controller pour l'explorer est en connaitre ses subtilités et limites.
