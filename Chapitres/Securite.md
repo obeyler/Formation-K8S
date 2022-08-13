@@ -15,7 +15,7 @@ Il faut donc se prémunir de ce que le container des actions qu'il ne devrait pa
 
 Plusieurs éléments ou outils vont vous permettre de réaliser cela : 
 - Les RBAC (Role base access control), 
-- Les PodSecurity [via les labels sur les namespace](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.md#un-role-lié-à-la-sécurité)
+- Les PodSecurity [via les labels sur les namespace](https://obeyler.github.io/Formation-K8S/Chapitres/LabelAnnotation.html#un-role-lié-à-la-sécurité)
 - Les securityContext, 
 - Les networkPolicy,
 - Les admissionController, 
