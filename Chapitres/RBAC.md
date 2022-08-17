@@ -75,7 +75,7 @@ subjects:
 ### Commandes utiles
 Pour associer un role et un serviceaccount
 ```shell
-kubectl create rolebinding monrolebinding -n monspace --role="monrole" --serviceaccount="monspace:monsa" --serviceaccount="monspace:monsa" --user="toto" --group="testeur"
+kubectl create rolebinding monrolebinding -n monspace --role="monrole" --serviceaccount="monspace:monsa" --user="toto" --group="testeur"
 ```
 ## ClusterRole
 ### Structure
